@@ -1,0 +1,15 @@
+{
+  "name": "more-tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker:build": "docker-compose -p {MORE.TECH} build",
+    "docker:down": "docker-compose -p {MORE.TECH} down",
+    "docker:up": "docker-compose -p {MORE.TECH} up",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
