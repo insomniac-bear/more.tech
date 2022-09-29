@@ -23,3 +23,4 @@
 **Документация по проекту**
 
 * [Ссылка на dashboard в Miro](https://miro.com/app/board/uXjVPSriYM0=/?share_link_id=184594433857)
+* [Ссылка на описания в Google Docs](https://docs.google.com/document/d/1x_YZWvJoz7GTiJ-p8Vc6sJ_rNMdUve8w/edit?usp=sharing&ouid=102738113006045652183&rtpof=true&sd=true)
