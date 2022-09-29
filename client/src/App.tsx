@@ -2,12 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { UserStatusLogo } from './components/UserStatusLogo/UserStatusLogo';
+import { MainLogo } from './components/MainLogo/MainLogo';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <UserStatusLogo userStatus="gold" width={100} />
+        <MainLogo width={300} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
