@@ -1,11 +1,18 @@
 import React, { FC } from 'react';
-import styles from './UserStatusLogo.module.css';
 import { IUserStatusLogoProps } from './UserStatusLogo.props';
 
-export const UserStatusLogo: FC<IUserStatusLogoProps> = ({ width, status, className = '', ...props }) => {
+const statusColors = {
+  bronze: '#cd7f32',
+  silver: '#a3a2a0',
+  gold: '#ffd700',
+  platinum: '#e5e4e2',
+  emerald: '#086522',
+};
+
+export const UserStatusLogo: FC<IUserStatusLogoProps> = ({ width, userStatus, className = '', ...props }) => {
   return (
     <svg
-      className={`${styles.image} ${className}`}
+      className={className}
       aria-label={'Пользовательская иконка статуса в Лиге ВТБ'}
       {...props}
       width={width}
@@ -46,7 +53,6 @@ export const UserStatusLogo: FC<IUserStatusLogoProps> = ({ width, status, classN
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_51_419" result="shape" />
         </filter>
         <linearGradient
-          className={styles.image__gradient}
           id="paint0_linear_51_419"
           x1="77.2364"
           y1="50.4841"
@@ -57,19 +63,14 @@ export const UserStatusLogo: FC<IUserStatusLogoProps> = ({ width, status, classN
           <animateTransform
             attributeName="gradientTransform"
             type="translate"
-            from="-90"
-            to="90"
-            dur="6s"
+            from="-80"
+            to="80"
+            dur="5s"
             repeatCount="indefinite"
           ></animateTransform>
-          <stop offset="0.408215" stopColor="#00AAFF" className={styles[`image__mainColor_${status}`]} />
-          <stop
-            className={styles[`image__shadeColor_${status}`]}
-            offset="0.567048"
-            stopColor="#00AAFF"
-            stopOpacity="0.03"
-          />
-          <stop offset="0.703395" stopColor="#00AAFF" className={styles[`image__mainColor_${status}`]} />
+          <stop offset="0.408215" stopColor={statusColors[userStatus]} />
+          <stop offset="0.567048" stopColor="#fff" />
+          <stop offset="0.703395" stopColor={statusColors[userStatus]} />
         </linearGradient>
       </defs>
     </svg>
