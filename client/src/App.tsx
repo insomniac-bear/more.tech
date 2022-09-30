@@ -1,9 +1,8 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { UserStatusLogo } from './components/UserStatusLogo/UserStatusLogo';
 import { MainLogo } from './components/MainLogo/MainLogo';
-import { SideLink } from './components/SideLink/SideLink';
+import { UserMenuItem } from './components/UserMenuItem/UserMenuItem';
 
 function App() {
   return (
@@ -11,16 +10,14 @@ function App() {
       <header className="App-header">
         <UserStatusLogo userStatus="gold" width={100} />
         <MainLogo width={300} />
-        <SideLink
+        <UserMenuItem
           name='ВТБ Store'
           url='/'
-          icon='StoreIcon'
           isActive={true}
         />
-        <SideLink
+        <UserMenuItem
           name='ВТБ Store'
           url='/'
-          icon='StoreIcon'
           isActive={false}
         />
         <img src={logo} className="App-logo" alt="logo" />

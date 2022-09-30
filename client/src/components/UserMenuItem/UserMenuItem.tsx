@@ -1,9 +1,9 @@
 import { FC} from 'react';
 // import { Link } from 'react-router-dom';
-import { ISideLinkProps } from './SideLink.props';
+import { IUserMenuItemProps } from './UserMenuItem';
 import styles from './SideLink.module.css';
 
-export const SideLink: FC<ISideLinkProps> = ({
+export const UserMenuItem: FC<IUserMenuItemProps> = ({
   name,
   url,
   isActive
