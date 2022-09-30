@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.activeContainer {
+  composes: container;
+  background-color: #9bddfc;
+}
+
+.link {
+  padding: 10px;
+  color: #515254;
+  font-style: none;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.container:hover .link {
+  color: #33539b;
+}
+
+.activeContainer .link {
+  color: #002882;
+}
+
+.title {
+  margin: 0;
+  padding: 10px;
+  color: #002882;
+}
