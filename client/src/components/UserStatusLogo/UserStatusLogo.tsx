@@ -1,13 +1,6 @@
 import React, { FC } from 'react';
 import { IUserStatusLogoProps } from './UserStatusLogo.props';
-
-const statusColors = {
-  bronze: '#cd7f32',
-  silver: '#a3a2a0',
-  gold: '#ffd700',
-  platinum: '#e5e4e2',
-  emerald: '#086522',
-};
+import { statusColors } from '../../utils/variables';
 
 export const UserStatusLogo: FC<IUserStatusLogoProps> = ({ width, userStatus, className = '', ...props }) => {
   return (

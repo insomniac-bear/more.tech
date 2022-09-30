@@ -1,0 +1,15 @@
+.fullName {
+  margin: 0;
+  font-family: var(--Inter);
+  font-weight: 500;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.875rem;
+  line-height: 2rem;
+  color: var(--black);
+  max-width: 380px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
