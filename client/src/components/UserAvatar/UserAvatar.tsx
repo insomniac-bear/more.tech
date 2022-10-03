@@ -7,5 +7,5 @@ export const UserAvatar: FC<IUserAvatarProps> = ({
 }) => (src ? (
   <img src={src} alt={alt} className={styles.avatar} />
 ) : (
-  <div className={`${styles.placeholder} ${className}`} {...props} aria-label={alt} />
+  <div className={`${styles.placeholder} ${className}`} {...props} aria-label={alt || 'Фотография'} />
 ));
