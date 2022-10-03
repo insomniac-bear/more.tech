@@ -4,6 +4,12 @@
   /* colors */
   --black: #000;
 
+  --grey-300: #C5C7C8;
+  --grey-400: #808285;
+  --grey-600: #000;
+
+  --link: #001AFF;
+
   /* fonts */
   --Inter: Inter, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

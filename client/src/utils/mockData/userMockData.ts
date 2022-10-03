@@ -1,13 +1,7 @@
 /* eslint-disable max-len */
-type TUserPersonalData = {
-  phoneNumber: string;
-  email: string;
-  personnelNumber: string;
-  personalCode: string;
-  laborСontract: string;
-};
 
 type TUserCurator = {
+  id: string;
   name: string;
   surname: string;
   patronymic: string;
@@ -16,6 +10,17 @@ type TUserCurator = {
 type TLeague = {
     userLeagueStatus: string;
     coinBalance: number;
+  };
+
+  type TUserPersonalData = {
+    phoneNumber: string;
+    email: string;
+    personnelNumber: string;
+    personalCode: string;
+    laborСontract: string;
+    position: string;
+    department: string;
+    curator: TUserCurator
   };
 
 type TUser = {
@@ -27,7 +32,6 @@ type TUser = {
   status: string;
   league: TLeague;
   personalData: TUserPersonalData;
-  curator: TUserCurator;
 };
 
 export const user: TUser = {
@@ -42,15 +46,18 @@ export const user: TUser = {
     coinBalance: 55,
   },
   personalData: {
+    position: 'Ведущий аналитик',
+    department: 'Информационной безопасности',
+    personalCode: '769-TYG',
     phoneNumber: '+7 (123) 123 12 34',
     email: 'ivanova@vtb.com',
     personnelNumber: '647333-330',
-    personalCode: '769-TYG',
     laborСontract: 'ТД/75648-99',
-  },
-  curator: {
-    name: 'Евгений',
-    surname: 'Сидоров',
-    patronymic: 'Валентинович',
+    curator: {
+      id: 'qwe',
+      name: 'Евгений',
+      surname: 'Сидоров',
+      patronymic: 'Валентинович',
+    },
   },
 };

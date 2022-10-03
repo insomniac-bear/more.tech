@@ -1,0 +1,55 @@
+.table {
+  border: none;
+  border-spacing: unset;
+  width: 100%;
+}
+
+.table__body {
+  width: 100%;
+}
+
+.table__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 10px;
+  border-bottom: 1px solid var(--grey-300);
+  height: 56px;
+}
+
+.text {
+  padding: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.table__itemLabel {
+  composes: text;
+  color: var(--grey-400);
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  max-width: 30%;
+  width: 100%;
+  text-align: left;
+}
+
+.table__itemValue {
+  composes: text;
+  color: var(--grey-600);
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  max-width: 60%;
+  width: 100%;
+  text-align: right;
+}
+
+.table__itemLink {
+  composes: text;
+  color: var(--link);
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  max-width: 60%;
+  width: 100%;
+  text-align: right;
+}
