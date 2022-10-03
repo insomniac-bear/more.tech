@@ -1,0 +1,9 @@
+@import url('../vandor/fonts/fonts.css');
+
+:root {
+  /* colors */
+  --black: #000;
+
+  /* fonts */
+  --Inter: Inter, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

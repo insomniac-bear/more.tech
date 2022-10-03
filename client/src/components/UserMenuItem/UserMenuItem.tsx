@@ -6,15 +6,13 @@ import styles from './UserMenuItem.module.css';
 export const UserMenuItem: FC<IUserMenuItemProps> = ({
   name,
   url,
-  isActive
-}) => {
-  return (
-    <li className={!isActive ? styles.container : styles.activeContainer}>
-      {
-        !isActive
-          ? <a className={styles.link} href={url}>{name}</a>
-          : <p className={styles.title}>{name}</p>
-      }
-    </li>
-  );
-}
+  isActive,
+}) => (
+  <li className={!isActive ? styles.container : styles.activeContainer}>
+    {
+      !isActive
+        ? <a className={styles.link} href={url}>{name}</a>
+        : <p className={styles.title}>{name}</p>
+    }
+  </li>
+);

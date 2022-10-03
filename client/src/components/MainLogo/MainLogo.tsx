@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import logo from '../../images/VTBLogo.svg';
 import styles from './MainLogo.module.css';
 import { IMainLogoProps } from './MainLogo.props';

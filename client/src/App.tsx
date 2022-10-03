@@ -5,8 +5,14 @@ import { MainLogo } from './components/MainLogo/MainLogo';
 import { UserAvatar } from './components/UserAvatar/UserAvatar';
 import { UserMenuItem } from './components/UserMenuItem/UserMenuItem';
 
+import { UserFullName } from './components/UserFullName/UserFullName';
+import { user } from './utils/mockData/userMockData';
 
 function App() {
+  const {
+    name, surname, patronymic, image,
+  } = user;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,23 +21,23 @@ function App() {
 
         <div style={{ width: '228px', display: 'flex', height: '308px' }}>
           <UserAvatar
-            alt="Фотография"
-            src="https://images.unsplash.com/photo-1664737426331-a1cde6c831d5?ixlib=rb-1.2.1&
-            ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=745&q=80"
+            alt={`${name} ${surname} ${patronymic}`}
+            src={image}
           />
         </div>
 
         <UserMenuItem
-          name='ВТБ Store'
-          url='/'
-          isActive={true}
+          name="ВТБ Store"
+          url="/"
+          isActive
         />
         <UserMenuItem
-          name='ВТБ Store'
-          url='/'
+          name="ВТБ Store"
+          url="/"
           isActive={false}
         />
 
+        <UserFullName nameFields={{ name, surname, patronymic }} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit
