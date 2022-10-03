@@ -24,6 +24,15 @@
   font-weight: 400;
 }
 
+.value {
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  max-width: 60%;
+  width: 100%;
+  text-align: right;
+  word-wrap: break-word;
+}
+
 .table__itemLabel {
   composes: text;
   color: var(--grey-400);
@@ -32,26 +41,19 @@
   max-width: 30%;
   width: 100%;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .table__itemValue {
   composes: text;
+  composes: value;
   color: var(--grey-600);
-  font-size: 1rem;
-  line-height: 1.3125rem;
-  max-width: 60%;
-  width: 100%;
-  text-align: right;
 }
 
 .table__itemLink {
   composes: text;
+  composes: value;
   color: var(--link);
-  font-size: 1rem;
-  line-height: 1.3125rem;
-  max-width: 60%;
-  width: 100%;
-  text-align: right;
   transition: color 0.3s linear;
   cursor: pointer;
 }
