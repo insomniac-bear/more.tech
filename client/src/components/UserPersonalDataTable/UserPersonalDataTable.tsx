@@ -21,6 +21,7 @@ export const UserPersonalDataTable: FC<IUserPersonalDataTableProps> = ({ data, c
               <td className={styles.table__itemLabel}>{el.label}</td>
               <td className={styles.table__itemLink}>
                 {/* <Link to={{ pathname: el.linkPath }}> */}
+                {/* Тут будет ссылка ! */}
                 {el.value}
                 {/* </Link> */}
               </td>

@@ -52,4 +52,10 @@
   max-width: 60%;
   width: 100%;
   text-align: right;
+  transition: color 0.3s linear;
+  cursor: pointer;
+}
+
+.table__itemLink:hover {
+  color: var(--accent-cyan-300);
 }

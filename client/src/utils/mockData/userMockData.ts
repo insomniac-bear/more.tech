@@ -1,29 +1,29 @@
 /* eslint-disable max-len */
 
-type TUserCurator = {
+export type TUserCurator = {
   id: string;
   name: string;
   surname: string;
   patronymic: string;
 };
 
-type TLeague = {
+export type TLeague = {
     userLeagueStatus: string;
     coinBalance: number;
   };
 
-  type TUserPersonalData = {
-    phoneNumber: string;
-    email: string;
-    personnelNumber: string;
-    personalCode: string;
-    laborСontract: string;
-    position: string;
-    department: string;
-    curator: TUserCurator
+export type TUserPersonalData = {
+  phoneNumber: string;
+  email: string;
+  personnelNumber: string;
+  personalCode: string;
+  laborСontract: string;
+  position: string;
+  department: string;
+  curator: TUserCurator
   };
 
-type TUser = {
+export type TUser = {
   uuid: string;
   name: string;
   surname: string;
