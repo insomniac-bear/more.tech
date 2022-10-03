@@ -1,8 +1,8 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { UserStatusLogo } from './components/UserStatusLogo/UserStatusLogo';
 import { MainLogo } from './components/MainLogo/MainLogo';
+import { UserMenuItem } from './components/UserMenuItem/UserMenuItem';
 
 function App() {
   return (
@@ -10,6 +10,16 @@ function App() {
       <header className="App-header">
         <UserStatusLogo userStatus="gold" width={100} />
         <MainLogo width={300} />
+        <UserMenuItem
+          name='ВТБ Store'
+          url='/'
+          isActive={true}
+        />
+        <UserMenuItem
+          name='ВТБ Store'
+          url='/'
+          isActive={false}
+        />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit
