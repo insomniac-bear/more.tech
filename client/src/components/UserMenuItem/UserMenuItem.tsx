@@ -1,7 +1,7 @@
-import { FC} from 'react';
+import { FC } from 'react';
 // import { Link } from 'react-router-dom';
-import { IUserMenuItemProps } from './UserMenuItem';
-import styles from './SideLink.module.css';
+import { IUserMenuItemProps } from './UserMenuItem.props';
+import styles from './UserMenuItem.module.css';
 
 export const UserMenuItem: FC<IUserMenuItemProps> = ({
   name,
