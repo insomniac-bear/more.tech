@@ -1,0 +1,26 @@
+.title {
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 500;
+  color: var(--grey-600);
+  margin: 0;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+/* size */
+
+.size_s {
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+}
+
+.size_m {
+  font-size: 2rem;
+  line-height: 2.125rem;
+}
+
+.size_l {
+  font-size: 2.5rem;
+  line-height: 2.9375rem;
+}

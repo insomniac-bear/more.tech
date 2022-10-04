@@ -4,6 +4,8 @@
   /* colors */
   --black: #000;
 
+  --grey-600: #000;
   /* fonts */
+  --Roboto: Roboto, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   --Inter: Inter, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

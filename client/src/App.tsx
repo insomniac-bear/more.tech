@@ -7,6 +7,7 @@ import { UserMenuItem } from './components/UserMenuItem/UserMenuItem';
 
 import { UserFullName } from './components/UserFullName/UserFullName';
 import { user } from './utils/mockData/userMockData';
+import { Title } from './components/Title/Title';
 
 function App() {
   const {
@@ -25,7 +26,9 @@ function App() {
             src={image}
           />
         </div>
-
+        <Title tag="h3" size="s">Я маленький заголовок третьего уровня</Title>
+        <Title>Я дефолтный заголовок второго уровня среднего размера</Title>
+        <Title tag="h2" size="l">Я заголовок второго уровня большого размера</Title>
         <UserMenuItem
           name="ВТБ Store"
           url="/"
