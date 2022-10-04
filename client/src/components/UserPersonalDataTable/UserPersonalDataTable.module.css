@@ -1,6 +1,7 @@
 .table {
   border: none;
   border-spacing: unset;
+  max-width: 494px;
   width: 100%;
 }
 
