@@ -1,0 +1,25 @@
+.cell {
+  padding: 0;
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  max-width: 60%;
+  width: 100%;
+  text-align: right;
+  word-wrap: break-word;
+  color: var(--grey-600);
+}
+
+
+.link {
+  color: var(--link);
+  transition: color 0.3s linear;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.link:hover {
+  color: var(--accent-cyan-300);
+}
