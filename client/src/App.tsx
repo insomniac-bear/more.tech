@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { UserStatusLogo } from './components/UserStatusLogo/UserStatusLogo';
 import { MainLogo } from './components/MainLogo/MainLogo';
@@ -7,6 +6,8 @@ import { UserMenuItem } from './components/UserMenuItem/UserMenuItem';
 
 import { UserFullName } from './components/UserFullName/UserFullName';
 import { user } from './utils/mockData/userMockData';
+import UserMenu from './components/UserMenu/UserMenu';
+import { userMenuMockData } from './utils/mockData/userMenuMockData';
 
 function App() {
   const {
@@ -18,6 +19,8 @@ function App() {
       <header className="App-header">
         <UserStatusLogo userStatus="gold" width={100} />
         <MainLogo width={300} />
+
+        <UserMenu menuData={userMenuMockData} />
 
         <div style={{ width: '228px', display: 'flex', height: '308px' }}>
           <UserAvatar
@@ -38,15 +41,6 @@ function App() {
         />
 
         <UserFullName nameFields={{ name, surname, patronymic }} />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          <code>src/App.tsx</code>
-          and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
       </header>
     </div>
   );
