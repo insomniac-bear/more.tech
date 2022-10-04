@@ -5,3 +5,11 @@
   font-display: swap;
   src: url('./Inter/Inter-Medium.woff2') format('woff2'), url('./Inter/Inter-Medium.woff') format('woff');
 }
+
+@font-face {
+  font-family: Roboto;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('./Roboto/Roboto-Medium.woff2') format('woff2'), url('./Roboto/Roboto-Medium.woff') format('woff');
+}

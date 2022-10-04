@@ -13,5 +13,6 @@
   --link: #001AFF;
 
   /* fonts */
+  --Roboto: Roboto, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   --Inter: Inter, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
