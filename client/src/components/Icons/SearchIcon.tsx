@@ -1,7 +1,6 @@
 import { FC } from 'react';
-import { IIconProps } from './Icon.props';
 
-export const SearchIcon: FC<IIconProps> = ({ className = '' }) => (
+export const SearchIcon: FC<{ className: string }> = ({ className = '' }) => (
   <svg className={className} width="13" height="12" viewBox="0 0 13 12" fill="#808285" xmlns="http://www.w3.org/2000/svg">
     <path
       // eslint-disable-next-line max-len
