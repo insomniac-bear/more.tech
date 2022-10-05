@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docker:build": "docker-compose -p {MORE.TECH} build",
-    "docker:down": "docker-compose -p {MORE.TECH} down",
-    "docker:up": "docker-compose -p {MORE.TECH} up",
+    "docker:build": "docker-compose build",
+    "docker:down": "docker-compose down",
+    "docker:up": "docker-compose up",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
