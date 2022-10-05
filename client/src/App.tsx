@@ -2,12 +2,12 @@ import './App.css';
 import { UserStatusLogo } from './components/UserStatusLogo/UserStatusLogo';
 import { MainLogo } from './components/MainLogo/MainLogo';
 import { UserAvatar } from './components/UserAvatar/UserAvatar';
-import { UserMenuItem } from './components/UserMenuItem/UserMenuItem';
 
 import { UserFullName } from './components/UserFullName/UserFullName';
 import { user } from './utils/mockData/userMockData';
 import UserMenu from './components/UserMenu/UserMenu';
 import { userMenuMockData } from './utils/mockData/userMenuMockData';
+import UserMenuNavLink from './components/UserMenuNavLink/UserMenuNavLink';
 
 function App() {
   const {
@@ -29,15 +29,13 @@ function App() {
           />
         </div>
 
-        <UserMenuItem
-          name="ВТБ Store"
-          url="/"
-          isActive
+        <UserMenuNavLink
+          title="ВТБ Store"
+          to="/"
         />
-        <UserMenuItem
-          name="ВТБ Store"
-          url="/"
-          isActive={false}
+        <UserMenuNavLink
+          title="ВТБ Store"
+          to="/"
         />
 
         <UserFullName nameFields={{ name, surname, patronymic }} />

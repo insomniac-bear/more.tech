@@ -1,4 +1,4 @@
-type TInnerMenuItemType = {
+export type TInnerMenuItemType = {
   id: string;
   title: string;
   link: string;

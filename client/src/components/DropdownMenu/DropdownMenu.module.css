@@ -1,0 +1,25 @@
+.dropdownMenu {
+  margin: 0;
+  padding: 16px 14px;
+  border-radius: 5px;
+  border: 1px solid #ccd4e6;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  font-size: 12px;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #e5f6ff;
+  text-align: left;
+  min-width: 180px;
+  box-shadow: 0 3px 8px rgba(0 0 0 / 9%);
+}
+
+.dropdownMenu__innerNavLink {
+  text-decoration: none;
+  color: #515254;
+}
+
+.dropdownMenu__innerNavLink:hover {
+  color: #002882;
+}
+

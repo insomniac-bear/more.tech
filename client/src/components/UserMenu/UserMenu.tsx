@@ -1,35 +1,24 @@
 import { FC } from 'react';
-import { NavLink } from 'react-router-dom';
 import { IUserMenuProps } from './UserMenu.props';
 import styles from './UserMenu.module.css';
+import UserMenuNavLink from '../UserMenuNavLink/UserMenuNavLink';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
 const UserMenu: FC<IUserMenuProps> = ({ menuData, className = '', ...props }) => (
   <ul className={`${styles.userMenu} ${className}`} {...props}>
     {menuData.map((menuItem) => (
       <li key={menuItem.id} className={styles.userMenu__item}>
-        <NavLink
+        <UserMenuNavLink
           to={menuItem.link}
-          className={({ isActive }) => (`${styles.userMenu__navLink} ${isActive ? styles.userMenu__navLink_active : ''}`)}
-        >
-          <>
-            {menuItem.title}
-            {menuItem.innerMenu && <div className={styles.arrowDown} />}
-          </>
-        </NavLink>
-
+          title={menuItem.title}
+          innerMenu={menuItem.innerMenu}
+          className={styles.userMenu__navLink}
+        />
         {menuItem.innerMenu && (
-          <ul className={styles.userMenu__innerMenu}>
-            {menuItem.innerMenu.map((innerMenuItem) => (
-              <li key={innerMenuItem.id}>
-                <NavLink
-                  to={innerMenuItem.link}
-                  className={styles.userMenu__innerNavLink}
-                >
-                  {innerMenuItem.title}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+          <DropdownMenu
+            className={styles.userMenu__dropdownMenu}
+            menuData={menuItem.innerMenu}
+          />
         )}
       </li>
     ))}
