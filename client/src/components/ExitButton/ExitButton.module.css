@@ -1,0 +1,19 @@
+.button {
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--accent-blue-500);
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  transition: color 0.3s linear;
+}
+
+.button:hover {
+  color: var(--link);
+}

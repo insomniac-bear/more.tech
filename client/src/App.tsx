@@ -9,6 +9,7 @@ import { UserFullName } from './components/UserFullName/UserFullName';
 import { user } from './utils/mockData/userMockData';
 import { Title } from './components/Title/Title';
 import { UserPersonalDataTable } from './components/UserPersonalDataTable/UserPersonalDataTable';
+import { ExitButton } from './components/ExitButton/ExitButton';
 
 function App() {
   const {
@@ -20,6 +21,7 @@ function App() {
       <header className="App-header">
         <UserPersonalDataTable data={personalData} />
         <UserStatusLogo userStatus="gold" width={100} />
+        <ExitButton />
         <MainLogo width={300} />
 
         <div style={{ width: '228px', display: 'flex', height: '308px' }}>
