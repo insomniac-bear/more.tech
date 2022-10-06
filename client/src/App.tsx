@@ -8,7 +8,7 @@ import { UserFullName } from './components/UserFullName/UserFullName';
 import { user } from './utils/mockData/userMockData';
 import { Title } from './components/Title/Title';
 import { UserPersonalDataTable } from './components/UserPersonalDataTable/UserPersonalDataTable';
-import { SearchBar } from './components/SearchBar/SearchBar';
+import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
   const {
