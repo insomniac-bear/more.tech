@@ -22,7 +22,7 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "max-len": ["error", { "code": 150 }],
+        "max-len": ["warn", { "code": 150 }],
         "import/extensions": 0,
         "react/jsx-filename-extension": 0,
         "import/no-unresolved": 0,

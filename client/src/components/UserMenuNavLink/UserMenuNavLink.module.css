@@ -1,0 +1,42 @@
+.userMenuNavLink {
+  border-radius: 5px;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Roboto, Arial, sans-serif;
+  color: #515254;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+
+.userMenuNavLink:hover,
+li:hover > .userMenuNavLink {
+  color: #33539b;
+  background-color: #e5f6ff;
+}
+
+.userMenuNavLink_active {
+  color: #002882;
+  background-color: #9bddfc;
+}
+
+.userMenuNavLink__arrowDown {
+  margin-bottom: 2.5px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #515254;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+.userMenuNavLink_active .userMenuNavLink__arrowDown {
+  border-color: #002882;
+}
+
+.userMenuNavLink:hover .userMenuNavLink__arrowDown {
+  border-color: #33539b;
+}
