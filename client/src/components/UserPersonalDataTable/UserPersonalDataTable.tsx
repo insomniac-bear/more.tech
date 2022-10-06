@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { TableRow } from './components/TableRow/TableRow';
+import TableRow from './components/TableRow/TableRow';
 import styles from './UserPersonalDataTable.module.css';
 import { IUserPersonalDataTableProps } from './UserPersonalDataTable.props';
 import { userPersonalDataDto } from './utils';
 
-export const UserPersonalDataTable: FC<IUserPersonalDataTableProps> = ({ data, className = '', ...props }) => {
+const UserPersonalDataTable: FC<IUserPersonalDataTableProps> = ({ data, className = '', ...props }) => {
   const preparedData = userPersonalDataDto(data);
 
   return (
@@ -15,3 +15,5 @@ export const UserPersonalDataTable: FC<IUserPersonalDataTableProps> = ({ data, c
     </table>
   );
 };
+
+export default UserPersonalDataTable;

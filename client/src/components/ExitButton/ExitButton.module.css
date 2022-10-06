@@ -15,5 +15,5 @@
 }
 
 .button:hover {
-  color: var(--link);
+  color: var(--accent-cyan-300);
 }

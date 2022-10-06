@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { IUserMenuItemProps } from './UserMenuItem.props';
 import styles from './UserMenuItem.module.css';
 
-export const UserMenuItem: FC<IUserMenuItemProps> = ({
+const UserMenuItem: FC<IUserMenuItemProps> = ({
   name,
   url,
   isActive,
@@ -16,3 +16,5 @@ export const UserMenuItem: FC<IUserMenuItemProps> = ({
     }
   </li>
 );
+
+export default UserMenuItem;

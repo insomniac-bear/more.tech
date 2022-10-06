@@ -1,15 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import { UserStatusLogo } from './components/UserStatusLogo/UserStatusLogo';
-import { MainLogo } from './components/MainLogo/MainLogo';
-import { UserAvatar } from './components/UserAvatar/UserAvatar';
-import { UserMenuItem } from './components/UserMenuItem/UserMenuItem';
-
-import { UserFullName } from './components/UserFullName/UserFullName';
+import UserStatusLogo from './components/UserStatusLogo/UserStatusLogo';
+import MainLogo from './components/MainLogo/MainLogo';
+import UserAvatar from './components/UserAvatar/UserAvatar';
+import UserMenuItem from './components/UserMenuItem/UserMenuItem';
+import UserFullName from './components/UserFullName/UserFullName';
 import { user } from './utils/mockData/userMockData';
-import { Title } from './components/Title/Title';
-import { UserPersonalDataTable } from './components/UserPersonalDataTable/UserPersonalDataTable';
-import { ExitButton } from './components/ExitButton/ExitButton';
+import Title from './components/Title/Title';
+import UserPersonalDataTable from './components/UserPersonalDataTable/UserPersonalDataTable';
+import ExitButton from './components/ExitButton/ExitButton';
 
 function App() {
   const {

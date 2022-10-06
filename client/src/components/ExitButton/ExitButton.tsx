@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styles from './ExitButton.module.css';
 import { IExitButtonProps } from './ExitButton.props';
 
-export const ExitButton: FC<IExitButtonProps> = ({ className = '', ...props }) => {
+const ExitButton: FC<IExitButtonProps> = ({ className = '', ...props }) => {
   const logoutHandler = () => {
     // ...
   };
@@ -13,3 +13,5 @@ export const ExitButton: FC<IExitButtonProps> = ({ className = '', ...props }) =
     </button>
   );
 };
+
+export default ExitButton;
