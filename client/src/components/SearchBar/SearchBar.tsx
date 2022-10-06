@@ -1,22 +1,28 @@
-import { FC, FormEvent, useRef } from 'react';
+import { FC } from 'react';
+import { useForm } from 'react-hook-form';
 import { SearchIcon } from '../Icons';
 import styles from './SearchBar.module.css';
 import { ISearchBarProps } from './SearchBar.props';
 
-export const SearchBar: FC<ISearchBarProps> = ({ className = '', ...props }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+type TFormData = {
+  searchParam: string;
+}
 
-  const formSubmitHandler = (e: FormEvent) => {
-    e.preventDefault();
-    // inputRef?.current?.value...
+const SearchBar: FC<ISearchBarProps> = ({ className = '', ...props }) => {
+  const { register, handleSubmit } = useForm<TFormData>();
+
+  const formSubmitHandler = (data: TFormData) => {
+    data.searchParam.toLowerCase(); // чтобы линтер не ругался =)
   };
 
   return (
-    <form className={`${styles.form} ${className}`} {...props} onSubmit={formSubmitHandler} aria-label="Поиск">
-      <input className={styles.form__input} type="text" ref={inputRef} placeholder="Поиск" />
+    <form className={`${styles.form} ${className}`} {...props} onSubmit={handleSubmit(formSubmitHandler)} aria-label="Поиск">
+      <input className={styles.form__input} type="text" placeholder="Поиск" {...register('searchParam')} />
       <button className={styles.form__button} type="submit">
         <SearchIcon className={styles.form__buttonIcon} />
       </button>
     </form>
   );
 };
+
+export default SearchBar;
