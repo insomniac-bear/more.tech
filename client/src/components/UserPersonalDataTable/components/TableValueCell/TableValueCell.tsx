@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styles from './TableValueCell.module.css';
 import { ITableValueCellProps } from './TableValueCell.props';
 
-export const TableValueCell: FC<ITableValueCellProps> = ({
+const TableValueCell: FC<ITableValueCellProps> = ({
   value, link, className = '', ...props
 }) => (link ? (
   <td className={`${styles.cell} ${styles.link} ${className}`} {...props}>
@@ -16,3 +16,5 @@ export const TableValueCell: FC<ITableValueCellProps> = ({
     {value}
   </td>
 ));
+
+export default TableValueCell;

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styles from './UserFullName.module.css';
 import { IUserFullNameProps } from './UserFullName.props';
 
-export const UserFullName: FC<IUserFullNameProps> = ({ nameFields, className = '', ...props }) => {
+const UserFullName: FC<IUserFullNameProps> = ({ nameFields, className = '', ...props }) => {
   const { name, surname, patronymic } = nameFields;
 
   return (
@@ -11,3 +11,5 @@ export const UserFullName: FC<IUserFullNameProps> = ({ nameFields, className = '
     </h2>
   );
 };
+
+export default UserFullName;

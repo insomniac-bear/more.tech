@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-export const SearchIcon: FC<{ className: string }> = ({ className = '' }) => (
+const SearchIcon: FC<{ className?: string }> = ({ className = '' }) => (
   <svg className={className} width="13" height="12" viewBox="0 0 13 12" fill="#808285" xmlns="http://www.w3.org/2000/svg">
     <path
       // eslint-disable-next-line max-len
@@ -8,3 +8,9 @@ export const SearchIcon: FC<{ className: string }> = ({ className = '' }) => (
     />
   </svg>
 );
+
+SearchIcon.defaultProps = {
+  className: undefined,
+};
+
+export default SearchIcon;

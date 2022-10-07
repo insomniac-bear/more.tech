@@ -34,6 +34,10 @@
   outline: none;
 }
 
+.form__input:focus::placeholder {
+  color: transparent;
+}
+
 .form__button {
   display: flex;
   align-items: center;

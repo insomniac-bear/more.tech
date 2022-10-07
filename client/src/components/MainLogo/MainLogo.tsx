@@ -3,7 +3,7 @@ import logo from '../../images/VTBLogo.svg';
 import styles from './MainLogo.module.css';
 import { IMainLogoProps } from './MainLogo.props';
 
-export const MainLogo: FC<IMainLogoProps> = ({ width, className = '', ...props }) => (
+const MainLogo: FC<IMainLogoProps> = ({ width, className = '', ...props }) => (
   <img
     style={{ width, height: width * 0.347 }}
     className={`${styles.logo} ${className}`}
@@ -12,3 +12,5 @@ export const MainLogo: FC<IMainLogoProps> = ({ width, className = '', ...props }
     {...props}
   />
 );
+
+export default MainLogo;

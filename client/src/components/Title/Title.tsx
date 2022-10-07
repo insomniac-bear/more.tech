@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styles from './Title.module.css';
 import { ITitleProps } from './Title.props';
 
-export const Title: FC<ITitleProps> = ({
+const Title: FC<ITitleProps> = ({
   tag = 'h2', size = 'm', children, className = '', ...props
 }) => {
   switch (tag) {
@@ -16,3 +16,5 @@ export const Title: FC<ITitleProps> = ({
       return <h2 className={`${styles.title} ${styles[`size_${size}`]} ${className}`} {...props}>{children}</h2>;
   }
 };
+
+export default Title;

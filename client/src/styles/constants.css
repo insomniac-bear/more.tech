@@ -8,9 +8,11 @@
   --grey-400: #808285;
   --grey-600: #000;
 
-  --accent-cyan-300: #00aaff;
+  --accent-blue-500: #002882;
 
-  --link: #001aff;
+  --accent-cyan-300: #00AAFF;
+  
+  --link: #001AFF;
 
   /* fonts */
   --Roboto: Roboto, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
