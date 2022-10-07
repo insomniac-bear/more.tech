@@ -10,10 +10,10 @@ Position.init({
     autoIncrement: true,
   },
   name: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false,
   },
 }, {
   sequelize,
-  modelName: 'Position',
+  modelName: 'position',
 });
