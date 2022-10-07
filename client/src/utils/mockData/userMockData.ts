@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+import mockAvatar from '../../images/mockAvatar.png';
 
 export type TUserCurator = {
   id: string;
@@ -39,7 +40,7 @@ export const user: TUser = {
   name: 'Иванова',
   surname: 'Алла',
   patronymic: 'Петровнаааааааааааааа',
-  image: 'https://images.unsplash.com/photo-1664737426331-a1cde6c831d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=745&q=80',
+  image: mockAvatar,
   status: 'В отпуске',
   league: {
     userLeagueStatus: 'gold',
