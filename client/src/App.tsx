@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Title from './components/Title/Title';
 import UserAvatar from './components/UserAvatar/UserAvatar';
-import UserFullName from './components/UserFullName/UserFullName';
+import UserName from './components/UserName/UserName';
 import UserMenuNavLink from './components/UserMenuNavLink/UserMenuNavLink';
 import UserPersonalDataTable from './components/UserPersonalDataTable/UserPersonalDataTable';
 import UserStatusLogo from './components/UserStatusLogo/UserStatusLogo';
@@ -10,7 +10,7 @@ import { user } from './utils/mockData/userMockData';
 
 function App() {
   const {
-    name, surname, patronymic, image, personalData,
+    name, surname, image, personalData,
   } = user;
 
   return (
@@ -21,9 +21,9 @@ function App() {
         <UserStatusLogo userStatus="gold" width={100} />
         {/* Завернут в див чтобы ограничить размер */}
         <div style={{ width: '276px', display: 'flex', height: '370px' }}>
-          <UserAvatar alt={`${name} ${surname} ${patronymic}`} src={image} />
+          <UserAvatar alt={`${name} ${surname}`} src={image} />
         </div>
-        <UserFullName nameFields={{ name, surname, patronymic }} />
+        <UserName nameFields={{ name, surname }} />
         <UserMenuNavLink title="ВТБ Store" to="/" />
         <Title tag="h3" size="s">
           Я маленький заголовок третьего уровня
