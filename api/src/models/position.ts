@@ -1,7 +1,7 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
 
-class Position extends Model {}
+export class Position extends Model {}
 
 Position.init({
   id: {
@@ -10,7 +10,7 @@ Position.init({
     autoIncrement: true,
   },
   name: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(50),
     allowNull: false,
   },
 }, {
