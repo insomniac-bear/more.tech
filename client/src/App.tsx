@@ -21,26 +21,19 @@ function App() {
         <UserStatusLogo userStatus="gold" width={100} />
         {/* Завернут в див чтобы ограничить размер */}
         <div style={{ width: '276px', display: 'flex', height: '370px' }}>
-          <UserAvatar
-            alt={`${name} ${surname} ${patronymic}`}
-            src={image}
-          />
+          <UserAvatar alt={`${name} ${surname} ${patronymic}`} src={image} />
         </div>
-
-        <UserMenuNavLink
-          title="ВТБ Store"
-          to="/"
-        />
-        <Title tag="h3" size="s">Я маленький заголовок третьего уровня</Title>
-        <Title>Я дефолтный заголовок второго уровня среднего размера</Title>
-        <Title tag="h2" size="l">Я заголовок второго уровня большого размера</Title>
-
-        <UserMenuNavLink
-          title="ВТБ Store"
-          to="/"
-        />
-
         <UserFullName nameFields={{ name, surname, patronymic }} />
+        <UserMenuNavLink title="ВТБ Store" to="/" />
+        <Title tag="h3" size="s">
+          Я маленький заголовок третьего уровня
+        </Title>
+        <Title>Я дефолтный заголовок второго уровня среднего размера</Title>
+        <Title tag="h2" size="l">
+          Я заголовок второго уровня большого размера
+        </Title>
+
+        <UserMenuNavLink title="ВТБ Store" to="/" />
       </div>
     </div>
   );
