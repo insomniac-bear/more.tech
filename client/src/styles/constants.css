@@ -1,10 +1,10 @@
-@import url('../vandor/fonts/fonts.css');
+@import url('../vendor/fonts/fonts.css');
 
 :root {
   /* colors */
   --black: #000;
 
-  --grey-300: #C5C7C8;
+  --grey-300: #c5c7c8;
   --grey-400: #808285;
   --grey-600: #000;
 

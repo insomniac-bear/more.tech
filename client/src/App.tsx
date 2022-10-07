@@ -1,27 +1,16 @@
 import './App.css';
-<<<<<<< HEAD
-import UserStatusLogo from './components/UserStatusLogo/UserStatusLogo';
-import MainLogo from './components/MainLogo/MainLogo';
-import UserAvatar from './components/UserAvatar/UserAvatar';
-import UserMenuItem from './components/UserMenuItem/UserMenuItem';
-import UserFullName from './components/UserFullName/UserFullName';
-import { user } from './utils/mockData/userMockData';
-import Title from './components/Title/Title';
-import UserPersonalDataTable from './components/UserPersonalDataTable/UserPersonalDataTable';
 import ExitButton from './components/ExitButton/ExitButton';
-=======
-import { UserStatusLogo } from './components/UserStatusLogo/UserStatusLogo';
-import { MainLogo } from './components/MainLogo/MainLogo';
-import { UserAvatar } from './components/UserAvatar/UserAvatar';
-
-import { UserFullName } from './components/UserFullName/UserFullName';
-import { user } from './utils/mockData/userMockData';
+import MainLogo from './components/MainLogo/MainLogo';
+import SearchBar from './components/SearchBar/SearchBar';
+import Title from './components/Title/Title';
+import UserAvatar from './components/UserAvatar/UserAvatar';
+import UserFullName from './components/UserFullName/UserFullName';
 import UserMenu from './components/UserMenu/UserMenu';
-import { userMenuMockData } from './utils/mockData/userMenuMockData';
 import UserMenuNavLink from './components/UserMenuNavLink/UserMenuNavLink';
-import { Title } from './components/Title/Title';
-import { UserPersonalDataTable } from './components/UserPersonalDataTable/UserPersonalDataTable';
->>>>>>> 01899a12e6b41b002a33eefeb76c511b60d9ef85
+import UserPersonalDataTable from './components/UserPersonalDataTable/UserPersonalDataTable';
+import UserStatusLogo from './components/UserStatusLogo/UserStatusLogo';
+import { userMenuMockData } from './utils/mockData/userMenuMockData';
+import { user } from './utils/mockData/userMockData';
 
 function App() {
   const {
@@ -35,6 +24,7 @@ function App() {
         <UserStatusLogo userStatus="gold" width={100} />
         <ExitButton />
         <MainLogo width={300} />
+        <SearchBar />
 
         <UserMenu menuData={userMenuMockData} />
 
