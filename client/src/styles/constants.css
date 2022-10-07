@@ -4,15 +4,19 @@
   /* colors */
   --black: #000;
 
+  --grey-100: #fdfdfd;
+  --grey-200: #f0f2f3;
   --grey-300: #c5c7c8;
   --grey-400: #808285;
   --grey-600: #000;
 
+  --accent-red-300: #f20000;
+
   --accent-blue-500: #002882;
 
-  --accent-cyan-300: #00AAFF;
-  
-  --link: #001AFF;
+  --accent-cyan-300: #00aaff;
+
+  --link: #001aff;
 
   /* fonts */
   --Roboto: Roboto, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;

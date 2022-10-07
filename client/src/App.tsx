@@ -1,15 +1,11 @@
 import './App.css';
-import ExitButton from './components/ExitButton/ExitButton';
-import MainLogo from './components/MainLogo/MainLogo';
-import SearchBar from './components/SearchBar/SearchBar';
+import Header from './components/Header/Header';
 import Title from './components/Title/Title';
 import UserAvatar from './components/UserAvatar/UserAvatar';
 import UserFullName from './components/UserFullName/UserFullName';
-import UserMenu from './components/UserMenu/UserMenu';
 import UserMenuNavLink from './components/UserMenuNavLink/UserMenuNavLink';
 import UserPersonalDataTable from './components/UserPersonalDataTable/UserPersonalDataTable';
 import UserStatusLogo from './components/UserStatusLogo/UserStatusLogo';
-import { userMenuMockData } from './utils/mockData/userMenuMockData';
 import { user } from './utils/mockData/userMockData';
 
 function App() {
@@ -19,14 +15,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <Header />
+      <div className="App-header">
         <UserPersonalDataTable data={personalData} />
         <UserStatusLogo userStatus="gold" width={100} />
-        <ExitButton />
-        <MainLogo width={300} />
-        <SearchBar />
-
-        <UserMenu menuData={userMenuMockData} />
 
         <div style={{ width: '228px', display: 'flex', height: '308px' }}>
           <UserAvatar
@@ -49,7 +41,7 @@ function App() {
         />
 
         <UserFullName nameFields={{ name, surname, patronymic }} />
-      </header>
+      </div>
     </div>
   );
 }

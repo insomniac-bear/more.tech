@@ -7,13 +7,14 @@
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  color: var(--accent-blue-500);
+  color: var(--grey-100);
   padding: 5px;
   background-color: transparent;
   border: none;
   transition: color 0.3s linear;
+  height: fit-content;
 }
 
 .button:hover {
-  color: var(--accent-cyan-300);
+  color: var(--accent-red-300);
 }

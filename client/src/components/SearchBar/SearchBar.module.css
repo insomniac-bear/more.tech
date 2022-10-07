@@ -14,28 +14,29 @@
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
-  line-height: 0.875rem;
+  line-height: 1rem;
   display: flex;
   align-items: center;
-  color: var(--grey-600);
+  color: var(--grey-200);
   background-color: transparent;
-  border: 1px solid var(--grey-300);
+  border: 1px solid var(--grey-200);
   border-radius: 5px;
 }
 
 .form__input::placeholder {
   font-family: inherit;
-  color: var(--grey-400);
+  color: var(--grey-200);
+  transition: opacity 0.3s ease;
 }
 
 .form__input:focus {
-  border: 1px solid var(--accent-cyan-300);
+  border: 1px solid var(--accent-red-300);
   border-radius: 5px;
   outline: none;
 }
 
 .form__input:focus::placeholder {
-  color: transparent;
+  opacity: 0;
 }
 
 .form__button {
@@ -51,9 +52,13 @@
   box-sizing: border-box;
   cursor: pointer;
   border: none;
-  background: var(--accent-red-100);
+  background: transparent;
+}
+
+.form__buttonIcon {
+  fill: var(--grey-200);
 }
 
 .form__input:focus + .form__button .form__buttonIcon {
-  fill: var(--accent-cyan-300);
+  fill: var(--accent-red-300);
 }
