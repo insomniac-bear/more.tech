@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header';
+import StatusBar from './components/StatusBar/StatusBar';
 import Title from './components/Title/Title';
 import UserAvatar from './components/UserAvatar/UserAvatar';
 import UserName from './components/UserName/UserName';
@@ -23,6 +24,14 @@ function App() {
         <div style={{ width: '276px', display: 'flex', height: '370px' }}>
           <UserAvatar alt={`${name} ${surname}`} src={image} />
         </div>
+
+        <StatusBar />
+        
+        <UserMenuNavLink
+          title="ВТБ Store"
+          to="/"
+        />
+        <Title tag="h3" size="s">Я маленький заголовок третьего уровня</Title>
         <UserName nameFields={{ name, surname }} />
         <UserMenuNavLink title="ВТБ Store" to="/" />
         <Title tag="h3" size="s">
