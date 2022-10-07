@@ -1,0 +1,25 @@
+.statusBar {
+  box-sizing: border-box;
+  padding-top: 12px;
+  min-height: 52px;
+  max-width: 300px;
+  width: 100%;
+  background: linear-gradient(90deg, #F20000 0%, rgba(217, 217, 217, .43) 104.47%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.statusBar__title {
+  font-size: 14px;
+  font-family: var(--Roboto);
+  color: #ffffff;
+}
+
+.statusBar__image {
+  width: 114px;
+  height: 114px;
+  position: absolute;
+  left: -27px;
+  top: -62px;
+}
