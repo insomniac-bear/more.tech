@@ -18,15 +18,18 @@ function App() {
     <div className="App">
       <Header />
       <div className="App-header">
-        <UserPersonalDataTable data={personalData} />
+        <div style={{ width: '500px', height: '500px' }}>
+          <UserPersonalDataTable data={personalData} />
+        </div>
+
         <UserStatusLogo userStatus="gold" width={100} />
+
         {/* Завернут в див чтобы ограничить размер */}
         <div style={{ width: '276px', display: 'flex', height: '370px' }}>
           <UserAvatar alt={`${name} ${surname}`} src={image} />
         </div>
 
         <StatusBar />
-        
         <UserMenuNavLink
           title="ВТБ Store"
           to="/"

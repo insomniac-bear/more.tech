@@ -1,13 +1,12 @@
 import { FC } from 'react';
-import TableLabelCell from '../TableLabelCell/TableLabelCell';
-import TableValueCell from '../TableValueCell/TableValueCell';
+import TableCell from '../TableCell/TableCell';
 import styles from './TableRow.module.css';
 import { ITableRowProps } from './TableRow.props';
 
 const TableRow: FC<ITableRowProps> = ({ rowElement, className = '', ...props }) => (
   <tr className={`${styles.row} ${className}`} {...props}>
-    <TableLabelCell label={rowElement.label} />
-    <TableValueCell value={rowElement.value} link={rowElement.linkPath || ''} />
+    <TableCell text={rowElement.label} type="label" />
+    <TableCell text={rowElement.value} type="value" />
   </tr>
 );
 
