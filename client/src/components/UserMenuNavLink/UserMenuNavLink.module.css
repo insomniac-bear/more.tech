@@ -2,10 +2,11 @@
   border-radius: 5px;
   text-decoration: none;
   box-sizing: border-box;
+  border: 1px solid transparent;
   padding: 10px;
   font-size: 14px;
   font-family: Roboto, Arial, sans-serif;
-  color: #515254;
+  color: #fdfdfd;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13,30 +14,23 @@
 }
 
 .userMenuNavLink:hover,
-li:hover > .userMenuNavLink {
-  color: #33539b;
-  background-color: #e5f6ff;
-}
-
+li:hover > .userMenuNavLink,
 .userMenuNavLink_active {
-  color: #002882;
-  background-color: #9bddfc;
+  color: #f20000;
+  border: 1px solid #f20000;
 }
 
 .userMenuNavLink__arrowDown {
   margin-bottom: 2.5px;
   width: 5px;
   height: 5px;
-  border: 1px solid #515254;
+  border: 1px solid #fdfdfd;
   border-width: 0 1px 1px 0;
   transform: rotate(45deg);
   border-radius: 1px;
 }
 
-.userMenuNavLink_active .userMenuNavLink__arrowDown {
-  border-color: #002882;
-}
-
+.userMenuNavLink_active .userMenuNavLink__arrowDown,
 .userMenuNavLink:hover .userMenuNavLink__arrowDown {
-  border-color: #33539b;
+  border-color: #f20000;
 }

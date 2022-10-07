@@ -2,13 +2,12 @@
   margin: 0;
   padding: 16px 14px;
   border-radius: 5px;
-  border: 1px solid #ccd4e6;
   flex-direction: column;
   gap: 10px;
   list-style: none;
   font-size: 12px;
   font-family: Roboto, Arial, sans-serif;
-  background-color: #e5f6ff;
+  background-color: rgba(253, 253, 253, 0.1);
   text-align: left;
   min-width: 180px;
   box-shadow: 0 3px 8px rgba(0 0 0 / 9%);
@@ -16,10 +15,10 @@
 
 .dropdownMenu__innerNavLink {
   text-decoration: none;
-  color: #515254;
+  color: #c5c7c8;
 }
 
 .dropdownMenu__innerNavLink:hover {
-  color: #002882;
+  color: #f20000;
 }
 
