@@ -1,5 +1,6 @@
 import './App.css';
 import ExitButton from './components/ExitButton/ExitButton';
+import Header from './components/Header/Header';
 import MainLogo from './components/MainLogo/MainLogo';
 import SearchBar from './components/SearchBar/SearchBar';
 import Title from './components/Title/Title';
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <Header />
+      <div className="App-header">
         <UserPersonalDataTable data={personalData} />
         <UserStatusLogo userStatus="gold" width={100} />
         <ExitButton />
@@ -49,7 +51,7 @@ function App() {
         />
 
         <UserFullName nameFields={{ name, surname, patronymic }} />
-      </header>
+      </div>
     </div>
   );
 }
