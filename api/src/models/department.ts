@@ -1,7 +1,7 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
 
-class Department extends Model {}
+export class Department extends Model {}
 
 Department.init({
   id: {
