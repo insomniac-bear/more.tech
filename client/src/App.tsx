@@ -19,8 +19,8 @@ function App() {
       <div className="App-header">
         <UserPersonalDataTable data={personalData} />
         <UserStatusLogo userStatus="gold" width={100} />
-
-        <div style={{ width: '228px', display: 'flex', height: '308px' }}>
+        {/* Завернут в див чтобы ограничить размер */}
+        <div style={{ width: '276px', display: 'flex', height: '370px' }}>
           <UserAvatar
             alt={`${name} ${surname} ${patronymic}`}
             src={image}
