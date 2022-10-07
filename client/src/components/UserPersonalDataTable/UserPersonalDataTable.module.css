@@ -2,6 +2,20 @@
   border: none;
   border-spacing: unset;
   width: 100%;
+  position: relative;
+}
+
+.table::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: -24px;
+  background-image: url("../../images/table-corner.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 234px;
+  height: 76px;
 }
 
 .table__body {

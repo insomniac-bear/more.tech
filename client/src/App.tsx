@@ -17,28 +17,26 @@ function App() {
     <div className="App">
       <Header />
       <div className="App-header">
-        <UserPersonalDataTable data={personalData} />
+        <div style={{ width: '500px', height: '500px' }}>
+          <UserPersonalDataTable data={personalData} />
+        </div>
+
         <UserStatusLogo userStatus="gold" width={100} />
 
         <div style={{ width: '228px', display: 'flex', height: '308px' }}>
-          <UserAvatar
-            alt={`${name} ${surname} ${patronymic}`}
-            src={image}
-          />
+          <UserAvatar alt={`${name} ${surname} ${patronymic}`} src={image} />
         </div>
 
-        <UserMenuNavLink
-          title="ВТБ Store"
-          to="/"
-        />
-        <Title tag="h3" size="s">Я маленький заголовок третьего уровня</Title>
+        <UserMenuNavLink title="ВТБ Store" to="/" />
+        <Title tag="h3" size="s">
+          Я маленький заголовок третьего уровня
+        </Title>
         <Title>Я дефолтный заголовок второго уровня среднего размера</Title>
-        <Title tag="h2" size="l">Я заголовок второго уровня большого размера</Title>
+        <Title tag="h2" size="l">
+          Я заголовок второго уровня большого размера
+        </Title>
 
-        <UserMenuNavLink
-          title="ВТБ Store"
-          to="/"
-        />
+        <UserMenuNavLink title="ВТБ Store" to="/" />
 
         <UserFullName nameFields={{ name, surname, patronymic }} />
       </div>

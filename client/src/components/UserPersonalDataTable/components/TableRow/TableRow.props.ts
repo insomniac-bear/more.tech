@@ -5,6 +5,5 @@ export interface ITableRowProps extends DetailedHTMLProps<HTMLAttributes<HTMLTab
     id: string;
     label: string;
     value: string;
-    linkPath?: string;
   };
 }
