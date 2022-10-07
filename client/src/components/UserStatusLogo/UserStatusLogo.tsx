@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { IUserStatusLogoProps } from './UserStatusLogo.props';
 import { statusColors } from '../../utils/variables';
 
-export const UserStatusLogo: FC<IUserStatusLogoProps> = ({
+const UserStatusLogo: FC<IUserStatusLogoProps> = ({
   width, userStatus, className = '', ...props
 }) => (
   <svg
@@ -70,3 +70,5 @@ export const UserStatusLogo: FC<IUserStatusLogoProps> = ({
     </defs>
   </svg>
 );
+
+export default UserStatusLogo;

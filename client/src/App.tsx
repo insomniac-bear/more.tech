@@ -1,4 +1,15 @@
 import './App.css';
+<<<<<<< HEAD
+import UserStatusLogo from './components/UserStatusLogo/UserStatusLogo';
+import MainLogo from './components/MainLogo/MainLogo';
+import UserAvatar from './components/UserAvatar/UserAvatar';
+import UserMenuItem from './components/UserMenuItem/UserMenuItem';
+import UserFullName from './components/UserFullName/UserFullName';
+import { user } from './utils/mockData/userMockData';
+import Title from './components/Title/Title';
+import UserPersonalDataTable from './components/UserPersonalDataTable/UserPersonalDataTable';
+import ExitButton from './components/ExitButton/ExitButton';
+=======
 import { UserStatusLogo } from './components/UserStatusLogo/UserStatusLogo';
 import { MainLogo } from './components/MainLogo/MainLogo';
 import { UserAvatar } from './components/UserAvatar/UserAvatar';
@@ -10,6 +21,7 @@ import { userMenuMockData } from './utils/mockData/userMenuMockData';
 import UserMenuNavLink from './components/UserMenuNavLink/UserMenuNavLink';
 import { Title } from './components/Title/Title';
 import { UserPersonalDataTable } from './components/UserPersonalDataTable/UserPersonalDataTable';
+>>>>>>> 01899a12e6b41b002a33eefeb76c511b60d9ef85
 
 function App() {
   const {
@@ -21,6 +33,7 @@ function App() {
       <header className="App-header">
         <UserPersonalDataTable data={personalData} />
         <UserStatusLogo userStatus="gold" width={100} />
+        <ExitButton />
         <MainLogo width={300} />
 
         <UserMenu menuData={userMenuMockData} />
