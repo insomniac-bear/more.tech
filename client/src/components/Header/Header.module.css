@@ -7,19 +7,23 @@
   align-items: center;
   grid-template-areas: 
   'logo . menu . search . backward';
-  grid-template-columns: min-content 0.1fr 575px 0.4fr 160px 30px min-content;
+  grid-template-columns: min-content 0.4fr 580px 0.8fr 160px 30px min-content;
   min-height: 88px;
   background-color: transparent;
 }
 
-.logo {
+.header__menu {
+  grid-area: menu;
+}
+
+.header__logo {
   grid-area: logo;
 }
 
-.searchBar {
+.header__searchBar {
   grid-area: search;
 }
 
-.backwardBtn {
+.header__backwardBtn {
   grid-area: backward;
 }
