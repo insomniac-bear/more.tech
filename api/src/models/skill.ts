@@ -24,5 +24,5 @@ Skill.init({
   },
 }, {
   sequelize,
-  tableName: 'Skill'
+  tableName: 'skill'
 });
