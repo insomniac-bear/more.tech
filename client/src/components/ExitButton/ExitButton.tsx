@@ -9,7 +9,7 @@ const ExitButton: FC<IExitButtonProps> = ({ className = '', ...props }) => {
 
   return (
     <button className={`${styles.button} ${className}`} onClick={logoutHandler} type="button" {...props}>
-      Выйти
+      Вернуться
     </button>
   );
 };

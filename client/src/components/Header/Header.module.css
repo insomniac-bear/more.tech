@@ -1,0 +1,25 @@
+.header {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  padding: 0 50px;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas: 
+  'logo . menu . search . backward';
+  grid-template-columns: min-content 0.1fr 575px 0.4fr 160px 30px min-content;
+  min-height: 88px;
+  background-color: transparent;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.searchBar {
+  grid-area: search;
+}
+
+.backwardBtn {
+  grid-area: backward;
+}
