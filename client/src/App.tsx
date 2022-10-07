@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header';
+import StatusBar from './components/StatusBar/StatusBar';
 import Title from './components/Title/Title';
 import UserAvatar from './components/UserAvatar/UserAvatar';
 import UserFullName from './components/UserFullName/UserFullName';
@@ -26,6 +27,7 @@ function App() {
             src={image}
           />
         </div>
+        <StatusBar />
 
         <UserMenuNavLink
           title="ВТБ Store"
