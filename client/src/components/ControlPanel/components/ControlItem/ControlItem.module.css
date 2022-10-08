@@ -1,0 +1,58 @@
+.item {
+  display: grid;
+  justify-items: center;
+  grid-template-areas: 
+  'identifier'
+  'btn';
+  gap: 24px 0;
+  position: relative;
+}
+
+.item__identifier {
+  grid-area: identifier;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  opacity: 1;
+  z-index: 999;
+  border: 2px solid var(--grey-100);
+  transition: opacity 0.3s linear;
+}
+
+.item__btn {
+  grid-area: btn;
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  padding: 6px;
+  color: var(--grey-100);
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+
+.item__btn:hover {
+  color: var(--accent-red-300);
+}
+
+.item__btn:hover + .item__identifier {
+  opacity: 0.5;
+}
+
+.item__identifier_red {
+  background-color: #FC0404;
+}
+
+.item__identifier_yellow {
+  background-color: #FA8A07;
+}
+
+.item__identifier_green {
+  background-color: #61FF00;
+}
