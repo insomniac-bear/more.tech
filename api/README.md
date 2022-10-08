@@ -64,19 +64,21 @@
   response:
 <p>
 <code>
-  {
-      "status": "success",
-      "departments": [
-          {
-              "id": 7,
-              "name": "Администратор"
-          },
-          {
-              "id": 8,
-              "name": "Отдел кадров"
-          }
-      ]
-  }
+  <pre>
+    {
+        "status": "success",
+        "departments": [
+            {
+                "id": 7,
+                "name": "Администратор"
+            },
+            {
+                "id": 8,
+                "name": "Отдел кадров"
+            }
+        ]
+    }
+  </pre>
 </code>
 
 ### Position
@@ -85,25 +87,27 @@
   response:
 </p>
 <code>
-  {
-      "status": "success",
-      "positions": [
-          {
-              "id": 13,
-              "name": "Администратор"
-          },
-          {
-              "id": 14,
-              "name": "Специалист"
-          },
-          {
-              "id": 15,
-              "name": "Главный Специалист"
-          },
-          {
-              "id": 16,
-              "name": "Стажер"
-          }
-      ]
-  }
+  <pre>
+    {
+        "status": "success",
+        "positions": [
+            {
+                "id": 13,
+                "name": "Администратор"
+            },
+            {
+                "id": 14,
+                "name": "Специалист"
+            },
+            {
+                "id": 15,
+                "name": "Главный Специалист"
+            },
+            {
+                "id": 16,
+                "name": "Стажер"
+            }
+        ]
+    }
+  </pre>
 </code>
