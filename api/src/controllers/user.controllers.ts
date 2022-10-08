@@ -1,6 +1,7 @@
 import { findUser } from '../services/user.service';
 import { User } from '../models';
 import { NextFunction, Request, Response } from 'express';
+import { createUserRespons } from './dto/user.dto';
 
 export const getUserByUuid = async (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -21,7 +22,7 @@ export const getUserByUuid = async (req: Request, res: Response, next: NextFunct
       .status(200)
       .json({
         status: 'success',
-        user,
+        user: createUserRespons(user),
       });
   } catch (err: any) {
     next(err);
