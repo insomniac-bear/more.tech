@@ -3,6 +3,7 @@ import CoinIcon from './CoinIcon';
 import StoreIcon from './StoreIcon';
 import UserIcon from './UserIcon';
 import SearchIcon from './SearchIcon';
+import BracketArrow from './BracketArrow';
 
 export {
   CalendarIcon,
@@ -10,4 +11,5 @@ export {
   StoreIcon,
   UserIcon,
   SearchIcon,
+  BracketArrow,
 };

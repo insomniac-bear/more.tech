@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import ControlPanel from '../../components/ControlPanel/ControlPanel';
 import Header from '../../components/Header/Header';
+import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import UserCard from '../../components/UserCard/UserCard';
+import UserWallet from '../../components/UserWallet/UserWallet';
 import { user } from '../../utils/mockData/userMockData';
 import styles from './ProfilePage.module.css';
 
@@ -9,8 +10,12 @@ const ProfilePage: FC = () => (
   <div className={styles.container}>
     <Header />
     <main className={styles.content}>
-      <UserCard style={{ margin: '0 auto' }} userData={user} />
-      <ControlPanel />
+      <UserCard className={styles.userCard} userData={user} />
+      <div className={styles.progress}>
+        <ProgressBar progress={50} skill="Soft" />
+        <ProgressBar progress={70} skill="Hard" />
+      </div>
+      <UserWallet className={styles.wallet} />
     </main>
   </div>
 );
