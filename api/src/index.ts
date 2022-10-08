@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express, NextFunction, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import sequelize from './db';
@@ -14,6 +14,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/users', userRouter);
+
+// Catch all server errors
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  res
+    .status(500)
+    .json({
+      message: `Server error: ${err}`,
+      data: []
+    });
+  console.log(err.message);
+});
 
 const start = async () => {
   try {

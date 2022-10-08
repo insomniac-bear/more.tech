@@ -24,5 +24,6 @@ Skill.init({
   },
 }, {
   sequelize,
-  tableName: 'skills'
+  tableName: 'skills',
+  timestamps: false,
 });

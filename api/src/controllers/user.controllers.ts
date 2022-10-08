@@ -24,7 +24,7 @@ export const getUserByUuid = async (req: Request, res: Response, next: NextFunct
         user,
       });
   } catch (err: any) {
-    throw new Error()
+    next(err);
   }
 }
 
@@ -39,6 +39,6 @@ export const getUsers = async (req: Request, res: Response, next: NextFunction) 
         users,
       });
   } catch (err: any) {
-    throw new Error(err.message)
+    next(err);
   }
 }

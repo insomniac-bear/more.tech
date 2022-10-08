@@ -16,4 +16,5 @@ Position.init({
 }, {
   sequelize,
   modelName: 'positions',
+  timestamps: false,
 });
