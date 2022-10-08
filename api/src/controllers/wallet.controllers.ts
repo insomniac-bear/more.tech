@@ -33,9 +33,8 @@ export const sendRespect = async (req: Request, res: Response, next: NextFunctio
       .status(200)
       .json({
         status: 'success',
-        hash,
       });
   } catch(err: any) {
-    throw new Error(err.message);
+    next(err);
   }
 }
