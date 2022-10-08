@@ -7,6 +7,7 @@ import { userRouter } from './routes/user.router';
 import { walletRouter } from './routes/wallet.router';
 import * as models from './models';
 import { departmentRouter } from './routes/department.router';
+import { positionRouter } from './routes/position.router';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use(cors());
 app.use('/users', userRouter);
 app.use('/wallet', walletRouter);
 app.use('/departments', departmentRouter);
+app.use('/positions', positionRouter);
 
 // Catch all server errors
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
