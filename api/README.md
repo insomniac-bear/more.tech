@@ -6,8 +6,8 @@
 <p>
   response:
 </p>
-<code>
-  <pre>
+<pre>
+  <code>
     {
       "status": "success",
       "users": [
@@ -48,8 +48,8 @@
           }
       ]
     }
-  </pre>
-</code>
+  </code>
+</pre>
 * POST /users/auth - авторизация пользователя
 * POST /users/registration-user - регистрация пилота
 * POST /users/registration-chief - регистрация капитана
@@ -63,8 +63,8 @@
 </p>
   response:
 <p>
-<code>
-  <pre>
+<pre>
+  <code>
     {
         "status": "success",
         "departments": [
@@ -78,16 +78,16 @@
             }
         ]
     }
-  </pre>
-</code>
+  </code>
+</pre>
 
 ### Position
 * GET /positions/ - получение всех Должностей
 <p>
   response:
 </p>
-<code>
-  <pre>
+<pre>
+  <code>
     {
         "status": "success",
         "positions": [
@@ -109,5 +109,5 @@
             }
         ]
     }
-  </pre>
-</code>
+  </code>
+</pre>
