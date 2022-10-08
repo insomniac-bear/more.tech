@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ProgressBar />
+      <ProgressBar progress={50} />
       <div className="App-header">
         <div style={{ width: '500px', height: '500px' }}>
           <UserPersonalDataTable data={personalData} />
