@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Header from '../../components/Header/Header';
+import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import UserCard from '../../components/UserCard/UserCard';
 import UserWallet from '../../components/UserWallet/UserWallet';
@@ -17,6 +18,7 @@ const ProfilePage: FC = () => (
       </div>
       <UserWallet className={styles.wallet} />
     </main>
+    <PrimaryButton type="button">Buttonnnnnn</PrimaryButton>
   </div>
 );
 
