@@ -15,5 +15,5 @@ Department.init({
   }
 }, {
   sequelize,
-  modelName: 'department',
+  modelName: 'departments',
 });
