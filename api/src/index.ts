@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import sequelize from './db';
 import { userRouter } from './routes/user.router';
+import { walletRouter } from './routes/wallet.router';
 import * as models from './models';
 
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/users', userRouter);
+app.use('/wallet', walletRouter);
 
 // Catch all server errors
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
