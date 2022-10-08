@@ -15,5 +15,5 @@ Position.init({
   },
 }, {
   sequelize,
-  modelName: 'position',
+  modelName: 'positions',
 });

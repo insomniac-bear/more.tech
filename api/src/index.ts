@@ -18,7 +18,7 @@ app.use('/users', userRouter);
 const start = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ force: true });
+    await sequelize.sync();
     app.listen(PORT, () => console.log(`Running on ${PORT}`));
   } catch (err) {
     console.log(err);

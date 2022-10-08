@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 import { FC } from 'react';
 import styles from './ProgressBar.module.css';
 import { IProgressBarProps } from './ProgressBar.props';
 
-// eslint-disable-next-line no-unused-vars
-const ProgressBar: FC<IProgressBarProps> = ({ className = '', size = 118, progress }) => {
+const ProgressBar: FC<IProgressBarProps> = ({
+  className = '', size = 118, progress, skill,
+}) => {
   // eslint-disable-next-line no-unused-vars
   const fullProgress = 134;
 
@@ -37,7 +39,7 @@ const ProgressBar: FC<IProgressBarProps> = ({ className = '', size = 118, progre
         50%
       </text>
       <text className={styles.svg__textSkill} id="count" x="50%" y="78%" fill="#FDFDFD" textAnchor="middle">
-        Soft
+        {skill}
       </text>
       <defs>
         <radialGradient

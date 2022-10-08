@@ -37,8 +37,8 @@ export type TUser = {
 
 export const user: TUser = {
   uuid: 'qwerty',
-  name: 'Иванова',
-  surname: 'Алла',
+  name: 'Сирена',
+  surname: 'Вильямс',
   patronymic: 'Петровнаааааааааааааа',
   image: mockAvatar,
   status: 'В отпуске',
