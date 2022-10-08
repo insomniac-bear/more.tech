@@ -5,8 +5,8 @@
   grid-template-areas: 
   'avatar name'
   'avatar personalData'
-  'statusBar .';
-  grid-template-rows: min-content 1fr min-content;
+  'statusBar controls';
+  grid-template-rows: min-content 1fr min-content ;
   grid-template-columns: 276px 1fr;
   gap: 0 64px;
 }
@@ -28,5 +28,10 @@
 
 .statusBar {
   margin: 6px 0 0 0;
+  height: fit-content;
   grid-area: statusBar;
+}
+
+.controls {
+  grid-area: controls;
 }

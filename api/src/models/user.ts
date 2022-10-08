@@ -2,7 +2,19 @@ import { Model, DataTypes } from 'sequelize';
 import sequelize from '../db';
 import { UserAttributes } from './utils/user.type';
 
-export class User extends Model<any> {}
+export class User extends Model<UserAttributes> {
+  declare uuid?: string;
+  declare name: string;
+  declare surname: string;
+  declare patronymic: string;
+  declare email: string;
+  declare password: string;
+  declare phone: string;
+  declare avatar?: string;
+  declare departmentId?: number | null;
+  declare positionId?: number | null;
+  declare roleId?: number | null;
+}
 
 User.init({
   uuid: {
@@ -35,6 +47,10 @@ User.init({
   phone: {
     type: DataTypes.INTEGER,
     allowNull: false,
+  },
+  avatar: {
+    type: DataTypes.STRING(500),
+    allowNull: true,
   }
 }, {
   sequelize,

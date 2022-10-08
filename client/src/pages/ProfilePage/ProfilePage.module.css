@@ -30,3 +30,32 @@
   left: 0;
   z-index: -1;
 }
+
+.content {
+  display: grid;
+  gap: 0 88px;
+  justify-content: center;
+  align-items: start;
+  grid-template-columns: fit-content 256px;
+  grid-template-rows: min-content 1fr 1fr;
+  grid-template-areas: 
+  'userCard progress'
+  'userCard wallet'
+  'userCard wallet';
+  
+
+}
+
+.userCard {
+  grid-area: userCard;
+}
+
+.progress {
+  grid-area: progress;
+  display: flex;
+  gap: 0 22px;
+}
+
+.wallet {
+  grid-area: wallet;
+}

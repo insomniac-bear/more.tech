@@ -2,10 +2,12 @@ import Cookies from 'js-cookie';
 import { FC, useEffect } from 'react';
 import ControlPanel from '../../components/ControlPanel/ControlPanel';
 import Header from '../../components/Header/Header';
+import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import UserCard from '../../components/UserCard/UserCard';
 import { apiService } from '../../services/apiService';
 import { useAppDispatch } from '../../services/hooks';
 import { setUser, setUserAuth } from '../../services/slices/userSlice';
+import UserWallet from '../../components/UserWallet/UserWallet';
 import styles from './ProfilePage.module.css';
 
 const ProfilePage: FC = () => {
@@ -29,8 +31,12 @@ const ProfilePage: FC = () => {
       <main className={styles.content}>
         {user && (
           <>
-            <UserCard style={{ margin: '0 auto' }} userData={user} />
-            <ControlPanel />
+            <UserCard className={styles.userCard} userData={user} />
+            <div className={styles.progress}>
+              <ProgressBar progress={50} skill="Soft" />
+              <ProgressBar progress={70} skill="Hard" />
+            </div>
+            <UserWallet className={styles.wallet} />
           </>
         )}
       </main>

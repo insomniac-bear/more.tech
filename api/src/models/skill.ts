@@ -2,7 +2,13 @@ import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
 import { SkillAttributes } from './utils/skill.type';
 
-export class Skill extends Model<SkillAttributes> {}
+export class Skill extends Model<SkillAttributes> {
+  declare id?: number;
+  declare type: 'hard' | 'soft';
+  declare value: number;
+  declare period: 'current' | 'last';
+  declare userUuid?: string;
+}
 
 Skill.init({
   id: {

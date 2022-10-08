@@ -1,6 +1,7 @@
 export type SkillAttributes = {
-  id: number,
+  id?: number,
   type: 'hard' | 'soft',
   value: number,
-  period: 'last' | 'current'
+  period: 'last' | 'current',
+  userUuid?: string,
 }

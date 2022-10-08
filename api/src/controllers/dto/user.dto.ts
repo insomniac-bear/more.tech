@@ -6,6 +6,7 @@ export const createUserRespons = (data: any) => {
     patronymic: data.patronymic,
     email: data.email,
     phone: data.phone,
+    avatar: data?.avatar,
     department: data.department.name,
     position: data.position.name,
     role: data.role.name,
