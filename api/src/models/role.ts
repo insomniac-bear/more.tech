@@ -16,5 +16,5 @@ Role.init({
   }
 }, {
   sequelize,
-  modelName: 'role',
+  modelName: 'roles',
 });
