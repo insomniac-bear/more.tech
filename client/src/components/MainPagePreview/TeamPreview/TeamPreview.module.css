@@ -1,0 +1,68 @@
+.container {
+  display: grid;
+  align-content: start;
+  grid-template-areas: 
+  'logo logo'
+  'captains team';
+  gap: 20px 0;
+  max-width: 434px;
+  min-height: 404px;
+  width: 100%;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.2) 0%, rgba(126, 122, 122, 0.520593) 71.18%, rgba(27, 18, 18, 0) 100%);
+}
+
+.logoWrapper {
+  border-bottom: 0.5px solid var(--grey-400);
+  width: 100%;
+  padding: 13px 30px 17px;
+  box-sizing: border-box;
+  grid-area: logo;
+}
+
+.logo {
+  display: block;
+  max-width: 130px;
+  max-height: 67px;
+  width: 100%;
+}
+
+.listContainer:nth-of-type(n+1) {
+  grid-area: captains;
+  align-self: start;
+  justify-self: center;
+}
+
+.listContainer:nth-of-type(2) {
+  grid-area: team;
+}
+
+.teamList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listHeading {
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: var(--grey-400);
+  text-align: left;
+  width: 100%;
+  margin: 0 0 11px 0;
+}
+
+.listItem {
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  color: var(--grey-100);
+  text-align: left;
+  width: 100%;
+  margin: 0;
+}
