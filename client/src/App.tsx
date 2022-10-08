@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ProgressBar progress={50} skill="soft" />
-      <ProgressBar progress={50} skill="hard" />
+      <ProgressBar progress={60} skill="soft" />
+      <ProgressBar progress={40} skill="hard" />
       <UserCard style={{ margin: '0 auto' }} userData={user} />
     </div>
   );

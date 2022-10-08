@@ -8,8 +8,9 @@ const ProgressBar: FC<IProgressBarProps> = ({
 }) => {
   // eslint-disable-next-line no-unused-vars
   const dash = 134;
-  const userProgress = (243 / 100) * progress;
-  const calculatedProgress = dash + userProgress;
+  const progressDash = 243;
+  const userProgress = (243 / 100) * progress - progressDash;
+  const calculatedProgress = dash - userProgress;
 
   return (
     <svg className={className} id="svg1" xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 140 140">
