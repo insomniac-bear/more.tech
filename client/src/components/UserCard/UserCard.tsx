@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import ControlPanel from '../ControlPanel/ControlPanel';
 import StatusBar from '../StatusBar/StatusBar';
 import UserAvatar from '../UserAvatar/UserAvatar';
 import UserName from '../UserName/UserName';
@@ -17,6 +18,7 @@ const UserCard: FC<IUserCardProps> = ({ userData, className = '', ...props }) =>
       <UserName nameFields={{ name, surname }} className={styles.name} />
       <UserPersonalDataTable data={personalData} className={styles.table} />
       <UserAvatar alt={`${name} ${surname}`} src={image} className={styles.avatar} />
+      <ControlPanel className={styles.controls} />
     </div>
   );
 };
