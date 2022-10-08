@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Header from '../../components/Header/Header';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import UserCard from '../../components/UserCard/UserCard';
+import UserWallet from '../../components/UserWallet/UserWallet';
 import { user } from '../../utils/mockData/userMockData';
 import styles from './ProfilePage.module.css';
 
@@ -14,6 +15,7 @@ const ProfilePage: FC = () => (
         <ProgressBar progress={50} skill="Soft" />
         <ProgressBar progress={70} skill="Hard" />
       </div>
+      <UserWallet className={styles.wallet} />
     </main>
   </div>
 );
