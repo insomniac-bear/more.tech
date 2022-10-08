@@ -4,7 +4,7 @@
   grid-template-areas: 
   'identifier'
   'btn';
-  gap: 24px 0;
+  gap: 15px 0;
   position: relative;
 }
 
@@ -16,8 +16,21 @@
   box-sizing: border-box;
   opacity: 1;
   z-index: 999;
-  border: 2px solid var(--grey-100);
   transition: opacity 0.3s linear;
+  position: relative;
+}
+
+.item__identifier::after {
+  position: absolute;
+  content: '';
+  background-image: url("../../../../images/highlight.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 11px;
+  height: 8px;
+  top: 5px;
+  right: 6px;
 }
 
 .item__btn {
@@ -32,6 +45,8 @@
   padding: 6px;
   cursor: pointer;
   transition: color 0.3s linear;
+  color: var(--grey-100);
+  background-color: transparent;
 }
 
 .item__btn:hover {
@@ -43,13 +58,16 @@
 }
 
 .item__identifier_red {
-  background-color: #FC0404;
+  background-color: #F20000;
+  border: 2px solid #A90101;
 }
 
 .item__identifier_yellow {
-  background-color: #FA8A07;
+  background-color: #EEF300;
+  border: 2px solid #B7BB01;
 }
 
 .item__identifier_green {
-  background-color: #61FF00;
+  background-color: #00B507;
+  border: 2px solid #036D01;
 }
