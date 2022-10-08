@@ -7,7 +7,7 @@ User.init({
   uuid: {
     type: DataTypes.UUID,
     primaryKey: true,
-    defaultValue: DataTypes.UUIDV4(),
+    defaultValue: DataTypes.UUIDV4,
     allowNull: false,
   },
   name: {
@@ -25,6 +25,7 @@ User.init({
   email: {
     type: DataTypes.STRING(256),
     allowNull: false,
+    unique: true,
   },
   password: {
     type: DataTypes.STRING(500),

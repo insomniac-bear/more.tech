@@ -20,5 +20,5 @@ Wallet.init({
   }
 }, {
   sequelize,
-  tableName: 'wallet'
+  tableName: 'wallets'
 });
