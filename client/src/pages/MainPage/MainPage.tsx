@@ -9,7 +9,7 @@ const MainPage: FC = () => (
     <Header />
     <main className={styles.content}>
       <MainPagePreview />
-      <Modal closeModal={() => {}}>1</Modal>
+      <Modal closeModal={() => {}}><p style={{ color: '#fff' }}>1</p></Modal>
     </main>
   </div>
 );
