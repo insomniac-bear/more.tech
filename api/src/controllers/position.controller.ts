@@ -9,7 +9,7 @@ export const getPositions = async (req: Request, res: Response, next: NextFuncti
       .status(200)
       .json({
         status: 'success',
-        departments: await positionService.getAllPositions(),
+        positions: await positionService.getAllPositions(),
       });
   } catch (err: any) {
     next(err);

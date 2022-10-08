@@ -40,7 +40,7 @@
 <code>
   {
       "status": "success",
-      "departments": [
+      "positions": [
           {
               "id": 13,
               "name": "Администратор"
