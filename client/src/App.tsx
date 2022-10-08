@@ -1,13 +1,15 @@
 import './App.css';
-import Header from './components/Header/Header';
-import { user } from './utils/mockData/userMockData';
-import UserCard from './components/UserCard/UserCard';
+import { Route, Routes } from 'react-router-dom';
+import MainPage from './pages/MainPage/MainPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <UserCard style={{ margin: '0 auto' }} userData={user} />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/profile/:userId" element={<ProfilePage />} />
+      </Routes>
     </div>
   );
 }
