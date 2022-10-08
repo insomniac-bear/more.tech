@@ -1,3 +1,4 @@
+import { nextTick } from 'process';
 import { User } from '../models';
 
 export const findUser = async (param: string, value: string) => {
@@ -8,7 +9,7 @@ export const findUser = async (param: string, value: string) => {
           all: true,
         },
         attributes: {
-          exclude: ['password']
+          exclude: ['password, createdAt, updatedAt']
         }
       });
     }
@@ -19,12 +20,12 @@ export const findUser = async (param: string, value: string) => {
         all: true,
       },
       attributes: {
-        exclude: ['password']
+        exclude: ['password, createdAt, updatedAt']
       }
   }});
 
   } catch (err: any) {
-    throw new Error(err.message)
+    nextTick(err);
   }
 
 }

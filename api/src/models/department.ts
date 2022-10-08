@@ -16,4 +16,5 @@ Department.init({
 }, {
   sequelize,
   modelName: 'departments',
+  timestamps: false,
 });

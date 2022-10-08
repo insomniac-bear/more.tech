@@ -30,15 +30,19 @@ Role.hasMany(User, {
 });
 User.belongsTo(Role);
 
-User.hasOne(Wallet, {
+User.hasMany(Wallet, {
   foreignKey: 'userUuid',
   onDelete: 'CASCADE',
   onUpdate: 'CASCADE',
 });
 Wallet.belongsTo(User);
 
-Skill.belongsToMany(User, { through: 'users_skills' });
-User.belongsToMany(Skill, { through: 'users_skills' });
+User.hasMany(Skill, {
+  foreignKey: 'userUuid',
+  onDelete: 'CASCADE',
+  onUpdate: 'CASCADE',
+});
+Skill.belongsTo(User);
 
 export {
   Department,

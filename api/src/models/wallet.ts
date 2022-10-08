@@ -17,8 +17,13 @@ Wallet.init({
   privateKey: {
     type: DataTypes.STRING(500),
     allowNull: false,
+  },
+  type: {
+    type: DataTypes.ENUM('self', 'chief', 'hr', 'corporate'),
+    allowNull: false,
   }
 }, {
   sequelize,
-  tableName: 'wallets'
+  tableName: 'wallets',
+  timestamps: false,
 });
