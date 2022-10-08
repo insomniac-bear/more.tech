@@ -1,0 +1,32 @@
+.container {
+  max-width: 790px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  'avatar name'
+  'avatar personalData'
+  'statusBar .';
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 276px 1fr;
+  gap: 0 64px;
+}
+
+.name {
+  grid-area: name;
+  margin: 0 0 22px 0;
+}
+
+.table {
+  grid-area: personalData;
+  align-self: start;
+}
+
+.avatar {
+  grid-area: avatar;
+  grid-row: 1/3;
+}
+
+.statusBar {
+  margin: 6px 0 0 0;
+  grid-area: statusBar;
+}
