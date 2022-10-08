@@ -15,5 +15,13 @@
   line-height: 1.3125rem;
   text-align: center;
   color: var(--accent-red-300);
-  /* border-bottom: 0.5px solid var(--grey-400); */
+  border-bottom: 0.5px solid var(--grey-400);
+}
+
+.item {
+  border-bottom: 0.5px solid var(--grey-500);
+}
+
+.item:nth-last-of-type(1) {
+  border: none;
 }

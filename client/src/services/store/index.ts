@@ -1,18 +1,20 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { userReducer } from './slices/userSlice';
-
-export const rootReducer = combineReducers({
-  user: userReducer,
-});
-
-export const index = configureStore({
-  reducer: rootReducer,
-});
+import {
+  ActionCreator, AnyAction, configureStore, ThunkAction,
+} from '@reduxjs/toolkit';
+import { apiService } from '../apiService';
+import { rootReducer } from '../slices';
 
 const store = configureStore({
   reducer: rootReducer,
-  // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([logger, emptySplitApi.middleware]),
-  preloadedState: undefined,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiService.middleware),
+  devTools: true,
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export type AppThunk<ReturnType = any> = ActionCreator<
+  ThunkAction<ReturnType, RootState, any, AnyAction>
+>;
 
 export default store;
