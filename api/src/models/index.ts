@@ -1,9 +1,10 @@
+import { Activity } from './activity';
 import { Department } from './department';
+import { Position } from './position';
 import { Role } from './role';
 import { Skill } from './skill';
 import { User } from './user';
 import { Wallet } from './wallet';
-import { Position } from './position';
 
 Department.hasOne(User, {
   foreignKey: {
@@ -13,6 +14,13 @@ Department.hasOne(User, {
   onUpdate: 'CASCADE'
 });
 User.belongsTo(Department);
+
+Department.hasMany(Activity, {
+  foreignKey: 'departmentId',
+  onDelete: 'CASCADE',
+  onUpdate: 'CASCADE',
+});
+Activity.belongsTo(Department);
 
 Position.hasOne(User, {
   foreignKey: 'positionId',
@@ -44,11 +52,19 @@ User.hasMany(Skill, {
 });
 Skill.belongsTo(User);
 
+User.hasMany(Activity, {
+  foreignKey: 'authorUuid',
+  onDelete: 'CASCADE',
+  onUpdate: 'CASCADE',
+});
+Activity.belongsTo(User);
+
 export {
+  Activity,
   Department,
+  Position,
   Role,
   Skill,
   User,
   Wallet,
-  Position,
 };
