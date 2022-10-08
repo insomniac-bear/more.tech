@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <UserCard userData={user} />
+      <UserCard style={{ margin: '0 auto' }} userData={user} />
     </div>
   );
 }
