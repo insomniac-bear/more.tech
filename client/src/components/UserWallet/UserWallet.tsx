@@ -24,7 +24,7 @@ const mockHistory: TMockTransaction[] = [
     purpose: 'Спасибо',
   },
   {
-    id: '123',
+    id: '1234',
     label: 'VTB Store',
     transactionType: 'write-off',
     amount: '100',
@@ -32,7 +32,7 @@ const mockHistory: TMockTransaction[] = [
     purpose: 'Аксессуары',
   },
   {
-    id: '123',
+    id: '125',
     label: 'Иванова Л.Ф.',
     transactionType: 'refill',
     amount: '1',
