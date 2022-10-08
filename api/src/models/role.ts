@@ -2,7 +2,10 @@ import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
 import { RoleAttributes } from './utils/role.type'
 
-export class Role extends Model<RoleAttributes> {}
+export class Role extends Model<RoleAttributes> {
+  declare id: number;
+  declare name: 'user' | 'hr' | 'admin' | 'chief';
+}
 
 Role.init({
   id: {

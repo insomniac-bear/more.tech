@@ -1,7 +1,11 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
+import { DepartmentAttributes } from './utils/department.type';
 
-export class Department extends Model {}
+export class Department extends Model<DepartmentAttributes> {
+  declare id: number;
+  declare name: string;
+}
 
 Department.init({
   id: {

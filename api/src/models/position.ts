@@ -2,7 +2,10 @@ import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
 import { PositionAttributes } from './utils/position.type';
 
-export class Position extends Model<PositionAttributes> {}
+export class Position extends Model<PositionAttributes> {
+  declare id: number;
+  declare name: number;
+}
 
 Position.init({
   id: {

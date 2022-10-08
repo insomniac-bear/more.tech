@@ -35,8 +35,11 @@ module.exports = {
       phone: {
         type: DataTypes.INTEGER,
         allowNull: false,
+      },
+      avatar: {
+        type: DataTypes.STRING(500),
+        allowNull: true,
       }
-
     });
   },
 
