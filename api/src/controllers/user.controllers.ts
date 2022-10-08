@@ -100,3 +100,32 @@ export const registrationUser = async (req: Request, res: Response, next: NextFu
     next(err);
   }
 }
+
+export const registrationChief = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { name, surname, patronymic, email, phone, departmentId, positionId, roleId, avatar } = req.body;
+
+    const candidate = await findUser('email', email);
+
+    if (candidate) {
+      return res
+        .status(404)
+        .json({
+          status: 'failed',
+          user: {
+            message: 'User already exist'
+          }
+        })
+    }
+
+    await createUser({ name, surname, patronymic, email, phone, avatar, departmentId, positionId, roleId }, 'chief', 'chief');
+
+    return res
+      .status(200)
+      .json({
+        status: 'success',
+      });
+  } catch(err) {
+    next(err);
+  }
+}
