@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie';
 import { FC, useEffect } from 'react';
-import ControlPanel from '../../components/ControlPanel/ControlPanel';
 import Header from '../../components/Header/Header';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import UserCard from '../../components/UserCard/UserCard';
