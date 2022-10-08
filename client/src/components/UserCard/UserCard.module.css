@@ -24,6 +24,7 @@
 .avatar {
   grid-area: avatar;
   grid-row: 1/3;
+  width: inherit;
 }
 
 .statusBar {

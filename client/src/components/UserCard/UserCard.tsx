@@ -9,7 +9,7 @@ import styles from './UserCard.module.css';
 
 const UserCard: FC<any> = ({ userData, className = '', ...props }) => {
   const {
-    name, surname, image, role, email, position, department, phone,
+    name, surname, avatar, role, email, position, department, phone,
   } = userData;
 
   const personalData = {
@@ -24,7 +24,7 @@ const UserCard: FC<any> = ({ userData, className = '', ...props }) => {
       <StatusBar status={role} className={styles.statusBar} />
       <UserName nameFields={{ name, surname }} className={styles.name} />
       <UserPersonalDataTable data={personalData} className={styles.table} />
-      <UserAvatar alt={`${name} ${surname}`} src={image} className={styles.avatar} />
+      <UserAvatar alt={`${name} ${surname}`} src={avatar} className={styles.avatar} />
       <ControlPanel className={styles.controls} />
     </div>
   );
