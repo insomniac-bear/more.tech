@@ -1,7 +1,6 @@
 import Cookies from 'js-cookie';
 import { FC, useEffect } from 'react';
 import Header from '../../components/Header/Header';
-import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import SecondaryButton from '../../components/SecondaryButton/SecondaryButton';
 import UserCard from '../../components/UserCard/UserCard';
@@ -10,7 +9,6 @@ import { useAppDispatch } from '../../services/hooks';
 import { setUser, setUserAuth } from '../../services/slices/userSlice';
 import UserWallet from '../../components/UserWallet/UserWallet';
 import styles from './ProfilePage.module.css';
-
 
 const ProfilePage: FC = () => {
   const dispatch = useAppDispatch();
@@ -46,6 +44,5 @@ const ProfilePage: FC = () => {
     </div>
   );
 };
-
 
 export default ProfilePage;
