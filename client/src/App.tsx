@@ -8,6 +8,7 @@ import UserMenuNavLink from './components/UserMenuNavLink/UserMenuNavLink';
 import UserPersonalDataTable from './components/UserPersonalDataTable/UserPersonalDataTable';
 import UserStatusLogo from './components/UserStatusLogo/UserStatusLogo';
 import { user } from './utils/mockData/userMockData';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 
 function App() {
   const {
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <ProgressBar />
       <div className="App-header">
         <div style={{ width: '500px', height: '500px' }}>
           <UserPersonalDataTable data={personalData} />
