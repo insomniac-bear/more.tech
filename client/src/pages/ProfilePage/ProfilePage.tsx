@@ -2,6 +2,7 @@ import Cookies from 'js-cookie';
 import { FC, useEffect } from 'react';
 import Header from '../../components/Header/Header';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
+import SecondaryButton from '../../components/SecondaryButton/SecondaryButton';
 import UserCard from '../../components/UserCard/UserCard';
 import { apiService } from '../../services/apiService';
 import { useAppDispatch } from '../../services/hooks';
@@ -39,6 +40,7 @@ const ProfilePage: FC = () => {
           </>
         )}
       </main>
+      <SecondaryButton type="button">Поблагодарить</SecondaryButton>
     </div>
   );
 };
