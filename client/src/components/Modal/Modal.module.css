@@ -19,6 +19,7 @@
   justify-content: center;
   max-width: 480px;
   min-height: 420px;
+  padding: 50px;
   width: 100%;
   background-color: var(--grey-600);
   border-radius: 10px;
