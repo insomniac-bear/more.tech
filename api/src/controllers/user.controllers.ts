@@ -31,13 +31,15 @@ export const getUserByUuid = async (req: Request, res: Response, next: NextFunct
 
 export const getUsers = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const users = await User.findAll();
+    const users = await User.findAll({
+      include: { all: true }
+    });
 
     return res
       .status(200)
       .json({
         status: 'success',
-        users,
+        users: users.map((user) => createUserRespons(user)),
       });
   } catch (err: any) {
     next(err);
