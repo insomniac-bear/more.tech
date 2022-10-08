@@ -10,7 +10,7 @@ const SideMenuCollapsibleItem: FC<ISideMenuCollapsibleItemProps> = ({
 
   const style = isHidden
     ? { maxHeight: 0 }
-    : { maxHeight: '700px' };
+    : { maxHeight: '500px' };
 
   const toggleHiddenState = () => setIsHidden(!isHidden);
 
