@@ -1,7 +1,9 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
+import { WalletAttributes } from './utils/wallet.type';
 
-export class Wallet extends Model {}
+
+export class Wallet extends Model<WalletAttributes> {}
 
 Wallet.init({
   id: {

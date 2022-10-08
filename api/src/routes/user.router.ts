@@ -5,3 +5,4 @@ export const userRouter = Router();
 
 userRouter.get('/:uuid', userController.getUserByUuid);
 userRouter.get('/', userController.getUsers);
+userRouter.post('/auth', userController.auth);

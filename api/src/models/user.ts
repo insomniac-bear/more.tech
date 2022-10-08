@@ -1,7 +1,8 @@
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../db';
+import { UserAttributes } from './utils/user.type';
 
-export class User extends Model {}
+export class User extends Model<any> {}
 
 User.init({
   uuid: {

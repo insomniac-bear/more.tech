@@ -7,22 +7,17 @@ export const findUser = async (param: string, value: string) => {
       return await User.findByPk(value, {
         include: {
           all: true,
-        },
-        attributes: {
-          exclude: ['password, createdAt, updatedAt']
         }
       });
     }
 
     return await User.findOne({ where: {
       [param]: value,
-      include: {
-        all: true,
-      },
-      attributes: {
-        exclude: ['password, createdAt, updatedAt']
-      }
-  }});
+    },
+    include: {
+      all: true,
+    }
+  });
 
   } catch (err: any) {
     nextTick(err);

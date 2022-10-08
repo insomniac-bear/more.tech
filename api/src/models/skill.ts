@@ -1,7 +1,8 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
+import { SkillAttributes } from './utils/skill.type';
 
-export class Skill extends Model {}
+export class Skill extends Model<SkillAttributes> {}
 
 Skill.init({
   id: {

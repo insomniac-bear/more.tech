@@ -1,12 +1,9 @@
 'use strict';
 const { v4: uuidv4 } = require('uuid');
-const { hash } = require('bcryptjs');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    const adminPassword = await hash('qwerty1234', 7);
-
     const roles = await queryInterface.sequelize.query(
       'SELECT id from ROLES;'
     );
@@ -28,7 +25,7 @@ module.exports = {
         surname: 'Админов',
         patronymic: 'Админович',
         email: 'admin@test.com',
-        password: `${adminPassword}`,
+        password: 'qwerty1234',
         phone: 1111111111,
         departmentId: departmentsId[0].id,
         positionId: positionsId[0].id,

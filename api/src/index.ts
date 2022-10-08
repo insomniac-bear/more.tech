@@ -1,6 +1,7 @@
 import express, { Express, NextFunction, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import sequelize from './db';
 import { userRouter } from './routes/user.router';
 import * as models from './models';
@@ -12,6 +13,7 @@ const app: Express = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use('/users', userRouter);
 
