@@ -7,7 +7,9 @@ const ProgressBar: FC<IProgressBarProps> = ({
   className = '', size = 118, progress, skill,
 }) => {
   // eslint-disable-next-line no-unused-vars
-  const fullProgress = 134;
+  const dash = 134;
+  const userProgress = (243 / 100) * progress;
+  const calculatedProgress = dash + userProgress;
 
   return (
     <svg className={className} id="svg1" xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 140 140">
@@ -28,7 +30,7 @@ const ProgressBar: FC<IProgressBarProps> = ({
         r="60"
         transform="rotate(-206 70 70)"
         fill="none"
-        strokeDashoffset="250" // 377
+        strokeDashoffset={calculatedProgress} // 377
         strokeDasharray="377" // так не видно 377
         stroke="url(#paint0_radial_404_6525)"
         strokeWidth="15"
@@ -36,7 +38,7 @@ const ProgressBar: FC<IProgressBarProps> = ({
         {/* <animate attributeName="stroke-dashoffset" dur="4s" begin="svg1.click" values="377;134" /> */}
       </circle>
       <text className={styles.svg__textPercent} id="count" x="50%" y="50%" fill="#FDFDFD" textAnchor="middle" dy="7">
-        50%
+        {`${progress}%`}
       </text>
       <text className={styles.svg__textSkill} id="count" x="50%" y="78%" fill="#FDFDFD" textAnchor="middle">
         {skill}
