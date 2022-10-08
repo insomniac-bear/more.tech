@@ -3,6 +3,7 @@
 ## User
 * GET /users/:uuid - получение пользователя по uuid
 * GET /users/ - получение всех пользователей
+* POST /users/auth - авторизация пользователя
 * POST /users/registration-user - регистрация пилота
 * POST /users/registration-chief - регистрация капитана
 * POST /users/registration-hr - регистрация HR
