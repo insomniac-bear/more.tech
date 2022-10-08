@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import styles from './ProgressBar.module.css';
 import { IProgressBarProps } from './ProgressBar.props';
 
 const ProgressBar: FC<IProgressBarProps> = () => (
@@ -27,10 +28,10 @@ const ProgressBar: FC<IProgressBarProps> = () => (
     >
       <animate attributeName="stroke-dashoffset" dur="4s" begin="svg1.click" values="377;134" />
     </circle>
-    <text id="count" x="50%" y="50%" fill="#FDFDFD" textAnchor="middle" dy="7" fontSize="32">
+    <text className={styles.svg__textPercent} id="count" x="50%" y="50%" fill="#FDFDFD" textAnchor="middle" dy="7">
       50%
     </text>
-    <text id="count" x="50%" y="80%" fill="#FDFDFD" textAnchor="middle" fontSize="16">
+    <text className={styles.svg__textSkill} id="count" x="50%" y="78%" fill="#FDFDFD" textAnchor="middle">
       Soft
     </text>
     <defs>
