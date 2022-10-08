@@ -50,6 +50,7 @@
     }
   </code>
 </pre>
+
 * POST /users/auth - авторизация пользователя
 * POST /users/registration-user - регистрация пилота
 * POST /users/registration-chief - регистрация капитана
