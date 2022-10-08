@@ -1,6 +1,6 @@
-import { findUser } from '../services/user.service';
+import { findUser, createUser } from '../services/user.service';
 import { User } from '../models';
-import { NextFunction, Request, response, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { createUserRespons } from './dto/user.dto';
 
 export const getUserByUuid = async (req: Request, res: Response, next: NextFunction) => {
@@ -68,6 +68,35 @@ export const auth = async (req: Request, res: Response, next: NextFunction) => {
           user: createUserRespons(candidate)
         });
   } catch (err) {
+    next(err);
+  }
+}
+
+export const registrationUser = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { name, surname, patronymic, email, phone, departmentId, positionId, roleId, avatar } = req.body;
+
+    const candidate = await findUser('email', email);
+
+    if (candidate) {
+      return res
+        .status(404)
+        .json({
+          status: 'failed',
+          user: {
+            message: 'User already exist'
+          }
+        })
+    }
+
+    await createUser({ name, surname, patronymic, email, phone, avatar, departmentId, positionId, roleId }, 'self', 'user');
+
+    return res
+      .status(200)
+      .json({
+        status: 'success',
+      });
+  } catch(err) {
     next(err);
   }
 }

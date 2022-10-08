@@ -1,6 +1,7 @@
 export type WalletAttributes = {
-  id: number,
+  id?: number,
   publicKey: string,
   privateKey: string,
-  type: 'self' | 'chief' | 'hr' | 'corporate'
+  type: 'self' | 'chief' | 'hr' | 'corporate',
+  userUuid?: string,
 }

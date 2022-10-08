@@ -9,7 +9,7 @@ export class User extends Model<UserAttributes> {
   declare patronymic: string;
   declare email: string;
   declare password: string;
-  declare phone: string;
+  declare phone: number;
   declare avatar?: string;
   declare departmentId?: number | null;
   declare positionId?: number | null;

@@ -5,7 +5,7 @@ export type UserAttributes = {
   patronymic: string,
   email: string,
   password: string,
-  phone: string,
+  phone: number,
   avatar?: string,
   departmentId?: number | null,
   positionId?: number | null,
