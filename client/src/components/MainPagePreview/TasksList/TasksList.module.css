@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+  max-width: 620px;
+  min-height: 404px;
+  width: 100%;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.2) 0%, rgba(126, 122, 122, 0.520593) 71.18%, rgba(27, 18, 18, 0) 100%);
+}
+.text {
+  margin: 0;
+  font-family: var(--Roboto);
+  font-style: normal;
+  color: var(--grey-100);
+  z-index: 5;
+}
+
+.label {
+  composes: text;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+  width: 100%;
+  padding: 32px 0;
+  border-bottom: 0.5px solid var(--grey-400);
+}
+
+.itemText {
+  composes: text;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3125;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  display: flex;
+  gap: 0 10px;
+}
+
+.checkIcon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../../images/checkmark.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

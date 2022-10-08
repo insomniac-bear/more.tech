@@ -11,11 +11,11 @@ const TasksList: FC = () => (
       </li>
       <li className={styles.listItem}>
         <i className={styles.checkIcon} />
-        <p>вовлечь сотрудников во внутрикорпоративные мероприятия</p>
+        <p className={styles.itemText}>вовлечь сотрудников во внутрикорпоративные мероприятия</p>
       </li>
       <li className={styles.listItem}>
         <i className={styles.checkIcon} />
-        <p>усилить мотивацию за счет внедрения игровых механик</p>
+        <p className={styles.itemText}>усилить мотивацию за счет внедрения игровых механик</p>
       </li>
     </ul>
   </div>
