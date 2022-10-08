@@ -10,3 +10,22 @@
 
 ## Wallet
 * POST /wallet/respect - отправить монеты пользователю
+
+## Department
+* GET /departments/ - получение всех Отделов
+### response:
+<code>
+  {
+      "status": "success",
+      "departments": [
+          {
+              "id": 7,
+              "name": "Администратор"
+          },
+          {
+              "id": 8,
+              "name": "Отдел кадров"
+          }
+      ]
+  }
+</code>

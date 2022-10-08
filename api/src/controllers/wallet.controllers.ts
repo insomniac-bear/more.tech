@@ -17,6 +17,7 @@ export const sendRespect = async (req: Request, res: Response, next: NextFunctio
     const hash = new Promise((resolve, reject) => {
       const hash = walletService.executeTransactionDR(wallet && wallet.privateKey, toPublicKey, amount);
       resolve(hash);
+      reject(new Error('Ошибка перевода'))
     })
     .then((hash) => {
         updateSkill(recipientsWallet?.userUuid, skillType, amount);
