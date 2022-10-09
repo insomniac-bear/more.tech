@@ -1,0 +1,28 @@
+.userMenu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.userMenu__item {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.userMenu__dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 43px;
+  left: 0;
+}
+
+.userMenu__item:hover > .userMenu__dropdownMenu {
+  display: flex;
+}
+
+.userMenu__item:hover > .userMenu__navLink > div {
+  border-color: #F20000;
+}

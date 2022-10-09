@@ -1,0 +1,26 @@
+.table {
+  border: none;
+  border-spacing: unset;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 24px 0 0;
+  overflow: hidden;
+}
+
+.table::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  background-image: url("../../images/table-corner.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 234px;
+  height: 76px;
+}
+
+.table__body {
+  width: 100%;
+}

@@ -1,0 +1,23 @@
+.button {
+  background-color: var(--accent-red-400);
+  cursor: pointer;
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  text-align: center;
+  color: var(--grey-100);
+  padding: 12.5px 78px;
+  min-width: 356px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+ .button:hover {
+  background-color: #B00101;
+} 
+
+/* .button:disabled {
+  color: var(--grey-300);
+}  */

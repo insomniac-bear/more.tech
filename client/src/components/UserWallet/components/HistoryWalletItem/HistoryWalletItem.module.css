@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px 20px;
+}
+
+.item__label {
+  margin: 0;
+  font-family: var(--Roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--grey-100);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.item__purpose {
+  color: var(--grey-400);
+}
