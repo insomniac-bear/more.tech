@@ -11,6 +11,7 @@ import { setUser, setUserAuth } from '../../services/slices/userSlice';
 import UserWallet from '../../components/UserWallet/UserWallet';
 import styles from './ProfilePage.module.css';
 import Modal from '../../components/Modal/Modal';
+import CreateUserForm from '../../components/CreateUserForm/CreateUserForm';
 
 const ProfilePage: FC = () => {
   const [params] = useSearchParams();
@@ -48,7 +49,7 @@ const ProfilePage: FC = () => {
       <SecondaryButton type="button">Поблагодарить</SecondaryButton>
       {modal === 'createPilot' && (
         // eslint-disable-next-line react/no-unstable-nested-components
-        <Modal closeModal={() => navigate('/profile')}>CREATE PILOT</Modal>
+        <Modal closeModal={() => navigate('/profile')}><CreateUserForm /></Modal>
       )}
     </div>
   );
