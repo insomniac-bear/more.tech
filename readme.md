@@ -11,6 +11,8 @@
 2. npm run docker:up - запуск docker контейнеров с проектом
 3. npm run docker:down - остановка docker контейнеров с проектом
 
+локально приложение доступно по адресу http://localhost:3000
+
 **Состав проекта**
 1. api - api сервер на базе NodeJS (ExpressJS)
 2. База Данных - PostgreSQL 12.1

@@ -1,5 +1,7 @@
 # Описание маршрутов API
 
+##
+ API запускается на маршруте http://localhost:5000
 ### User
 * GET /users/:uuid - получение пользователя по uuid
 * GET /users/ - получение всех пользователей
@@ -58,10 +60,21 @@
 
 ### Wallet
 * POST /wallet/respect - отправить монеты пользователю
+* POST /wallet/checkActivity - выполнить активность
+<p>request:</p>
+<pre>
+  <code>
+    recipientUuid: string, - сотрудник участвующий в активности
+    authorUuid: string, - автор активности
+    profit: number,
+    departmentId: number, - департамент автора активности
+    type: 'hard' | 'soft'
+  </code>
+</pre>
 
 ### Department
 * GET /departments/ - получение всех Отделов
-</p>
+</pre>
   response:
 <p>
 <pre>
