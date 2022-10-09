@@ -15,7 +15,7 @@ module.exports = {
         privateKey: '7ff36787c08bb74217cd61e666b4dd3b3d8c2e2fe7a5d1fd9bbef3ebc12fd53c',
         type: 'corporate',
         userUuid: usersId[0].uuid
-      }
+      },
     ])
   },
 

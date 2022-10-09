@@ -112,3 +112,30 @@
     }
   </code>
 </pre>
+
+### Activity
+* POST /activity/create/ - создание активности
+<p>request body:</p>
+<pre>
+  <code>
+    {
+      title: string,
+      type: 'hard' | 'soft',
+      profit: number,
+      description: string,
+      authorUuid: string,
+      departmentId: number,
+    }
+  </code>
+</pre>
+
+* GET /activity/:id - получение активности по id
+* POST /activity/ - получение всех активностей доступных пользователю
+<p>request body:</p>
+<pre>
+  <code>
+    {
+      userUuid: string,
+    }
+  </code>
+</pre>
