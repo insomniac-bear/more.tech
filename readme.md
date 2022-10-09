@@ -7,9 +7,15 @@
 * Документация по проекту
 
 **Запуск проекта**
+<p>Для запуска контейнера необходим Docker и NodeJS</p>
+<p>Запуск осуществляется последовательным выпорлнением следующих команд</p>
+
 1. npm run docker:build - сборка проекта
 2. npm run docker:up - запуск docker контейнеров с проектом
-3. npm run docker:down - остановка docker контейнеров с проектом
+
+<p>Для остановки проекта необходимо выполнить команду:</p>
+
+1. npm run docker:down - остановка docker контейнеров с проектом
 
 локально приложение доступно по адресу http://localhost:3000
 
@@ -26,3 +32,4 @@
 
 * [Ссылка на dashboard в Miro](https://miro.com/app/board/uXjVPSriYM0=/?share_link_id=184594433857)
 * [Ссылка на описания в Google Docs](https://docs.google.com/document/d/1x_YZWvJoz7GTiJ-p8Vc6sJ_rNMdUve8w/edit?usp=sharing&ouid=102738113006045652183&rtpof=true&sd=true)
+* [Ссылка на описание api](https://github.com/insomniac-bear/more.tech/blob/develop/api/README.md)

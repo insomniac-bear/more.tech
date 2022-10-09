@@ -54,6 +54,25 @@
 </pre>
 
 * POST /users/auth - авторизация пользователя
+<p>body:</p>
+<pre>
+  <code>
+    {
+      "email": "admin@test.com",
+      "password": "qwerty1234"
+    }
+  </code>
+</pre>
+<p>response:</p>
+<pre>
+  <code>
+    {
+      "email": "admin@test.com",
+      "password": "qwerty1234"
+    }
+  </code>
+</pre>
+
 * POST /users/registration-user - регистрация пилота
 * POST /users/registration-chief - регистрация капитана
 * POST /users/registration-hr - регистрация HR
