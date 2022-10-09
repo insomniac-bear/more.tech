@@ -30,6 +30,7 @@
 
 **Документация по проекту**
 
+* [Ссылка на презентацию](https://drive.google.com/drive/folders/1U3yJilM1gYkYtzqdrQFp6wtqIrdU_jXr)
 * [Ссылка на dashboard в Miro](https://miro.com/app/board/uXjVPSriYM0=/?share_link_id=184594433857)
 * [Ссылка на описания в Google Docs](https://docs.google.com/document/d/1x_YZWvJoz7GTiJ-p8Vc6sJ_rNMdUve8w/edit?usp=sharing&ouid=102738113006045652183&rtpof=true&sd=true)
 * [Ссылка на описание api](https://github.com/insomniac-bear/more.tech/blob/develop/api/README.md)
