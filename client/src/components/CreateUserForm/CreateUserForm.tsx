@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
@@ -7,11 +8,14 @@ import styles from './CreateUserForm.module.css';
 import { ICreateUserFormProps } from './CreateUserForm.props';
 
 type TFormData = {
-  role: string;
-  team: string;
-  phone: string;
+  name: string;
+  surname: string;
+  patronymic: string;
   email: string;
-  password: string;
+  phone: string;
+  departmentId: number;
+  positionId: number;
+  roleId: number;
 };
 
 const CreateUserForm: FC<ICreateUserFormProps> = ({ className = '', ...props }) => {
@@ -20,6 +24,10 @@ const CreateUserForm: FC<ICreateUserFormProps> = ({ className = '', ...props }) 
   const navigate = useNavigate();
 
   const formSubmitHandler = async (data: TFormData) => {
+    data.departmentId = 1;
+    data.positionId = 2;
+    data.roleId = 2;
+
     try {
       createPilot(data);
     } catch (error: any) {
@@ -37,11 +45,11 @@ const CreateUserForm: FC<ICreateUserFormProps> = ({ className = '', ...props }) 
       aria-label="Создание пользователя"
     >
       <h2 className={styles.form__heading}>Создание пилота</h2>
-      <input type="text" placeholder="Роль" className={styles.form__field} {...register('role')} />
-      <input type="text" placeholder="Команда" className={styles.form__field} {...register('team')} />
-      <input type="text" placeholder="Номер телефона" className={styles.form__field} {...register('phone')} />
+      <input type="text" placeholder="Имя" className={styles.form__field} {...register('name')} />
+      <input type="text" placeholder="Фамилия" className={styles.form__field} {...register('surname')} />
+      <input type="text" placeholder="Отчество" className={styles.form__field} {...register('patronymic')} />
       <input type="text" placeholder="Email" className={styles.form__field} {...register('email')} />
-      <input type="text" placeholder="Пароль" className={styles.form__field} {...register('password')} />
+      <input type="text" placeholder="Телефон" className={styles.form__field} {...register('phone')} />
       <PrimaryButton type="submit" className={styles.form__submit}>
         Создать
       </PrimaryButton>
