@@ -20,7 +20,7 @@ const RespectForm: FC<IRespectFormProps> = ({ className = '', ...props }) => {
       className={`${styles.form} ${className}`}
       onSubmit={handleSubmit(formSubmitHandler)}
       {...props}
-      aria-label="Создание пользователя"
+      aria-label="Форма благодарности"
     >
       <h2 className={styles.form__heading}>Поблагодарить</h2>
       <input
