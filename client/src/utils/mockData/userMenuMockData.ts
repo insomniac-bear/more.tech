@@ -49,4 +49,9 @@ export const userMenuMockData: TUserMenuMockDataType[] = [
     title: 'Список пилотов',
     link: '/pilots',
   },
+  {
+    id: '5',
+    title: 'Список мероприятий',
+    link: '/activity',
+  },
 ];
