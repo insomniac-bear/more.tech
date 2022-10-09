@@ -66,19 +66,90 @@
 <p>response:</p>
 <pre>
   <code>
-    {
-      "email": "admin@test.com",
-      "password": "qwerty1234"
+  {
+    "status": "success",
+    "user": {
+        "uuid": "2e3cb390-97f1-4727-9e0c-27bd281ee61d",
+        "name": "Иван",
+        "surname": "Админов",
+        "patronymic": "Админович",
+        "email": "admin@test.com",
+        "phone": 1111111111,
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80",
+        "department": "Администратор",
+        "position": "Администратор",
+        "role": "admin",
+        "wallets": [
+            "0x79d1d20256334326842D05D08707D7a9041BCd95"
+        ],
+        "skills": [
+            {
+                "name": "soft",
+                "value": 100,
+                "period": "current"
+            },
+            {
+                "name": "hard",
+                "value": 100,
+                "period": "current"
+            }
+        ]
     }
-  </code>
+}  </code>
 </pre>
 
 * POST /users/registration-user - регистрация пилота
+<p>body:</p>
+<pre>
+  <code>
+{
+    "name": "Max",
+    "surname": "Mad",
+    "patronymic": "Sandman",
+    "email": "test18@test.com",
+    "phone": "1111111111",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "departmentId": 1,
+    "positionId": 2,
+    "roleId": 2
+}  </code>
+</pre>
+<p>response:</p>
+<pre>
+  <code>
+  {
+    "status": "success"
+  }
+  </code>
+</pre>
+
 * POST /users/registration-chief - регистрация капитана
+<p>Тело запроса и ответа аналогичны теелу запроса и ответа регистрации Пилота</p>
+
 * POST /users/registration-hr - регистрация HR
+<p>Тело запроса и ответа аналогичны теелу запроса и ответа регистрации Пилота</p>
 
 ### Wallet
 * POST /wallet/respect - отправить монеты пользователю
+<p>Тело запроса:</p>
+<pre>
+  <code>
+    {
+      "userUuid": "62083ff9-d4fb-4335-96de-6fabaaf981a1",
+      "toPublicKey": "0x0289CA162b8a2f5F965A029195E719C61Ee6F8F7",
+      "amount": 5,
+      "skillType": "soft"
+    }
+  </code>
+</pre>
+<p>Тело ответа:</p>
+<pre>
+  <code>
+    {
+      status: "success"
+    }
+  </code>
+</pre>
 * POST /wallet/checkActivity - выполнить активность
 <p>request:</p>
 <pre>
