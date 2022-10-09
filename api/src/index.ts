@@ -3,7 +3,11 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import sequelize from './db';
+import { activityRouter } from './routes/activity.router';
+import { departmentRouter } from './routes/department.router';
+import { positionRouter } from './routes/position.router';
 import { userRouter } from './routes/user.router';
+import { walletRouter } from './routes/wallet.router';
 import * as models from './models';
 
 dotenv.config();
@@ -16,6 +20,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/users', userRouter);
+app.use('/wallet', walletRouter);
+app.use('/departments', departmentRouter);
+app.use('/positions', positionRouter);
+app.use('/activity', activityRouter);
 
 // Catch all server errors
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {

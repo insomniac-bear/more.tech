@@ -3,7 +3,13 @@ import sequelize from '../db';
 import { WalletAttributes } from './utils/wallet.type';
 
 
-export class Wallet extends Model<WalletAttributes> {}
+export class Wallet extends Model<WalletAttributes> {
+  declare id?: number;
+  declare publicKey: string;
+  declare privateKey: string;
+  declare type: 'self' | 'chief' | 'hr' | 'corporate';
+  declare userUuid?: string;
+}
 
 Wallet.init({
   id: {

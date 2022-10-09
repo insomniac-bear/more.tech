@@ -1,3 +1,4 @@
+import { Op } from 'sequelize';
 import { Skill } from '../models';
 
 export const getUsersSkills = async (userUuid: string) => {
@@ -17,4 +18,25 @@ export const createSkill = async (userUuid: string, type: 'hard' | 'soft', perio
     period,
     userUuid,
   });
+}
+
+export const updateSkill = async (userUuid: string | undefined, type: 'hard' | 'soft', amount: number) => {
+  try {
+    const skill = await Skill.findOne({ where: {
+      userUuid,
+    }});
+    if (skill) {
+      return await Skill.update({
+        value: skill?.value + amount
+      }, {
+        where: {
+          [Op.and]: [{ type }, { userUuid }]
+        }
+      });
+    } else {
+      throw new Error('User not found');
+    }
+  } catch (err: any) {
+    throw new Error (err.message);
+  }
 }

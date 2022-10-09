@@ -1,5 +1,6 @@
 import Cookies from 'js-cookie';
 import { FC, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import SecondaryButton from '../../components/SecondaryButton/SecondaryButton';
@@ -9,8 +10,12 @@ import { useAppDispatch } from '../../services/hooks';
 import { setUser, setUserAuth } from '../../services/slices/userSlice';
 import UserWallet from '../../components/UserWallet/UserWallet';
 import styles from './ProfilePage.module.css';
+import Modal from '../../components/Modal/Modal';
 
 const ProfilePage: FC = () => {
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+  const modal = params.get('modal');
   const dispatch = useAppDispatch();
   const token = Cookies.get('token') || '';
 
@@ -41,6 +46,10 @@ const ProfilePage: FC = () => {
         )}
       </main>
       <SecondaryButton type="button">Поблагодарить</SecondaryButton>
+      {modal === 'createPilot' && (
+        // eslint-disable-next-line react/no-unstable-nested-components
+        <Modal closeModal={() => navigate('/profile')}>CREATE PILOT</Modal>
+      )}
     </div>
   );
 };
