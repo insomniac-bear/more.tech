@@ -51,7 +51,6 @@ export const auth = async (req: Request, res: Response, next: NextFunction) => {
     const { email } = req.body;
 
     const candidate = await findUser('email', email);
-    console.log(candidate);
 
 
     if (!candidate) {

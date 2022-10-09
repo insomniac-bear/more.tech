@@ -6,7 +6,7 @@ export const getAllDepartments = async () => {
   } catch (err: any) {
     throw new Error(err.message);
   }
-}
+};
 
 export const getDepartmentById = async (id: number) => {
   try {
@@ -14,4 +14,17 @@ export const getDepartmentById = async (id: number) => {
   } catch (err: any) {
     throw new Error(err.message)
   }
-}
+};
+
+
+export const getDepartmentByName = async (name: string) => {
+  try {
+    return await Department.findOne({
+      where: {
+        name
+      }
+    });
+  } catch (err: any) {
+    throw new Error(err.message)
+  }
+};

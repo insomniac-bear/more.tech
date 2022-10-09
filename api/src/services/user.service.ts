@@ -1,4 +1,4 @@
-import { User, Wallet } from '../models';
+import { Department, Position, Role, Skill, User, Wallet } from '../models';
 import { getDepartmentById } from './department.service';
 import { getPositionById } from './position.service';
 import { getRoleById } from './role.service';
@@ -9,18 +9,46 @@ export const findUser = async (param: string, value: string) => {
   try {
     if (param === 'uuid') {
       return await User.findByPk(value, {
-        include: {
-          all: true,
-        }
-      });
+        include: [
+          {
+            model: Department,
+          },
+          {
+            model: Position,
+          },
+          {
+            model: Role,
+          },
+          {
+            model: Wallet,
+          },
+          {
+            model: Skill,
+          },
+        ]
+          });
     }
 
     return await User.findOne({ where: {
       [param]: value,
     },
-    include: {
-      all: true,
-    }
+    include: [
+      {
+        model: Department,
+      },
+      {
+        model: Position,
+      },
+      {
+        model: Role,
+      },
+      {
+        model: Wallet,
+      },
+      {
+        model: Skill,
+      },
+    ]
   });
 
   } catch (err: any) {

@@ -7,7 +7,7 @@
   align-items: center;
   grid-template-areas: 
   'logo . menu . search . backward';
-  grid-template-columns: min-content 0.4fr 580px 0.8fr 160px 30px min-content;
+  grid-template-columns: min-content 0.4fr 900px 0.8fr 160px 30px min-content;
   min-height: 88px;
   background-color: transparent;
 }

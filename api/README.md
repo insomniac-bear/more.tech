@@ -1,5 +1,7 @@
 # Описание маршрутов API
 
+##
+ API запускается на маршруте http://localhost:5000
 ### User
 * GET /users/:uuid - получение пользователя по uuid
 * GET /users/ - получение всех пользователей
@@ -52,16 +54,46 @@
 </pre>
 
 * POST /users/auth - авторизация пользователя
+<p>body:</p>
+<pre>
+  <code>
+    {
+      "email": "admin@test.com",
+      "password": "qwerty1234"
+    }
+  </code>
+</pre>
+<p>response:</p>
+<pre>
+  <code>
+    {
+      "email": "admin@test.com",
+      "password": "qwerty1234"
+    }
+  </code>
+</pre>
+
 * POST /users/registration-user - регистрация пилота
 * POST /users/registration-chief - регистрация капитана
 * POST /users/registration-hr - регистрация HR
 
 ### Wallet
 * POST /wallet/respect - отправить монеты пользователю
+* POST /wallet/checkActivity - выполнить активность
+<p>request:</p>
+<pre>
+  <code>
+    recipientUuid: string, - сотрудник участвующий в активности
+    authorUuid: string, - автор активности
+    profit: number,
+    departmentId: number, - департамент автора активности
+    type: 'hard' | 'soft'
+  </code>
+</pre>
 
 ### Department
 * GET /departments/ - получение всех Отделов
-</p>
+</pre>
   response:
 <p>
 <pre>
@@ -109,6 +141,33 @@
                 "name": "Стажер"
             }
         ]
+    }
+  </code>
+</pre>
+
+### Activity
+* POST /activity/create/ - создание активности
+<p>request body:</p>
+<pre>
+  <code>
+    {
+      title: string,
+      type: 'hard' | 'soft',
+      profit: number,
+      description: string,
+      authorUuid: string,
+      departmentId: number,
+    }
+  </code>
+</pre>
+
+* GET /activity/:id - получение активности по id
+* POST /activity/ - получение всех активностей доступных пользователю
+<p>request body:</p>
+<pre>
+  <code>
+    {
+      userUuid: string,
     }
   </code>
 </pre>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Op } from 'sequelize';
 import { Wallet } from '../models';
 
 const BASE_WALLET_URL = 'https://hackathon.lsp.team/hk';
@@ -35,7 +36,7 @@ type TTransactionData = {
   transactionHash: string,
 };
 
-export const executeTransactionDR = async (fromPrivateKey: string | null, toPublicKey: string, amount: number) => {
+export const executeTransactionDR = async (fromPrivateKey: string | null, toPublicKey: string | null, amount: number) => {
   try {
     if (!fromPrivateKey) {
       throw new Error('Отсутствует кошелек отправителя');
@@ -73,3 +74,18 @@ export const findWallet = async (param: string, value: string) => {
     throw new Error(err.message);
   }
 }
+
+/**
+ * Поиск публичного кошелька в БД по параметру
+ */
+
+ export const findPublicWallet = async (param: string, value: string, type: 'chief' | 'hr') => {
+  try {
+    return await Wallet.findOne({ where: {
+      [Op.and]: [{ [param]: value }, { type }]
+    }})
+  } catch (err: any) {
+    throw new Error(err.message);
+  }
+}
+
