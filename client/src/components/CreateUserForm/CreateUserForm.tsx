@@ -1,5 +1,7 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { apiService } from '../../services/apiService';
 import PrimaryButton from '../PrimaryButton/PrimaryButton';
 import styles from './CreateUserForm.module.css';
 import { ICreateUserFormProps } from './CreateUserForm.props';
@@ -14,9 +16,17 @@ type TFormData = {
 
 const CreateUserForm: FC<ICreateUserFormProps> = ({ className = '', ...props }) => {
   const { register, handleSubmit } = useForm<TFormData>();
+  const [createPilot] = apiService.useCreatePilotMutation();
+  const navigate = useNavigate();
 
-  const formSubmitHandler = (data: TFormData) => {
-    console.log(data);
+  const formSubmitHandler = async (data: TFormData) => {
+    try {
+      createPilot(data);
+    } catch (error: any) {
+      throw new Error(error);
+    } finally {
+      navigate(-1);
+    }
   };
 
   return (

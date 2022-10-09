@@ -12,5 +12,12 @@ export const apiService = createApi({
       }),
       transformResponse: (response: any) => response.user,
     }),
+    createPilot: build.mutation<any, any>({
+      query: (data) => ({
+        method: 'POST',
+        url: 'users/registration-user',
+        body: data,
+      }),
+    }),
   }),
 });
